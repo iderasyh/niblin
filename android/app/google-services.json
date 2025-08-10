@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "852554518025",
+    "project_id": "niblin-app",
+    "storage_bucket": "niblin-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:852554518025:android:33d94956252336ea2d32d8",
+        "android_client_info": {
+          "package_name": "com.hysatech.niblin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "852554518025-sk6k6iq4khftrfaro500thlbntefpr8u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hysatech.niblin",
+            "certificate_hash": "f0863d5d858c0045eee3308704f532c748dcfed6"
+          }
+        },
+        {
+          "client_id": "852554518025-npglbred6c07n49r9c7c1tieqclh8hfc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCijJpRyRw240DCHTOiaQ-rXt1dRKio_RI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "852554518025-npglbred6c07n49r9c7c1tieqclh8hfc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "852554518025-h05dk58e118kmjp9eb3uc3jm6fgbj4a8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hysatech.niblin"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

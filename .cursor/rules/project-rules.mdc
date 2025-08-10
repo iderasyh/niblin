@@ -1,0 +1,14 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Cursor Project Rules
+
+- Project must be modular and scalable.
+- Use clearly named folders and follow Flutter best practices.
+- Comments should be concise and only where logic is complex.
+- Keep all rules in sync with tech-stack and architecture files.
+- Firebase should be treated as the single source of truth.
+- Riverpod must always be used with Riverpod Generator.
+- go_router dependency must be used for navigation.

@@ -1,0 +1,56 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Repository Implementation Rules
+
+Repositories are responsible for abstracting data operations, primarily interacting with Firestore. Follow these guidelines when creating or modifying repositories:
+
+1.  **Location**: Place repository files within the `data` folder of their corresponding feature directory: `lib/src/features/[feature_name]/data/[repository_name]_repository.dart`.
+2.  **Dependencies**:
+    *   Inject `FirebaseFirestore` and Riverpod's `Ref` via the constructor.
+    *   Example: `const MyRepository(this._firestore, this.ref);`
+3.  **Firestore Path Generation**:
+    *   Define `static String` private helper methods within the repository class to construct Firestore paths dynamically.
+    *   Utilize constants defined in `[FirebaseConsts](mdc:lib/src/core/constants/firebase_consts.dart)` for collection/field names.
+    *   Example: `static String _usersPath() => FirebaseConsts.usersCollection;`
+4.  **Current User Access**:
+    *   Access the current authenticated user (`AppUser`) and their `UserID` by reading the `[AuthRepository](mdc:lib/src/features/authentication/data/auth_repository.dart)` provider via the injected `ref`.
+    *   Example: `AppUser get _currentUser => ref.read(authRepositoryProvider).currentUser!;`
+5.  **Core Methods**:
+    *   Implement methods for standard CRUD (Create, Read, Update, Delete) operations related to the feature's data models.
+    *   Methods should clearly indicate the model they operate on (e.g., `fetchUserModel`, `updateProductModel`).
+6.  **Firestore References & Converters**:
+    *   Create private helper methods that return `DocumentReference<Model>` or `CollectionReference<Model>`.
+    *   **Crucially**, use `.withConverter()` on these references to handle the mapping between Firestore documents (maps) and your Dart data models (defined in the `domain` layer).
+    *   Example:
+        ```dart
+        DocumentReference<MyModel> _myModelDocRef(String docId) =>
+            _firestore.doc(_myModelPath(docId)).withConverter(
+                  fromFirestore: (snapshot, _) => MyModel.fromMap(snapshot.data()!),
+                  toFirestore: (model, _) => model.toMap(),
+                );
+        ```
+7.  **Riverpod Integration**:
+    *   **Repository Provider**: Define a Riverpod provider (using `@riverpod`) for the repository class itself. This makes the repository instance available for dependency injection.
+        ```dart
+        @riverpod
+        MyRepository myRepository(MyRepositoryRef ref) {
+          return MyRepository(FirebaseFirestore.instance, ref);
+        }
+        ```
+    *   **Data Fetching Providers**: Create separate `@riverpod` providers (often `FutureProvider` or `StreamProvider`) for specific data-fetching functions. These providers should use `ref.watch` or `ref.read` to access the repository provider and call its methods.
+        ```dart
+        @riverpod
+        FutureOr<List<MyModel>> fetchMyModels(FetchMyModelsRef ref) {
+          final repository = ref.watch(myRepositoryProvider);
+          return repository.fetchAllModels();
+        }
+        ```
+8.  **Code Generation**: Include the `part '[repository_name]_repository.g.dart';` directive for Riverpod code generation.
+9.  **Models**: Repositories interact with models defined in the `domain` folder ([Model Placement Rules](mdc:.cursor/rules/model-placement.mdc)). Ensure `.toMap()` and `.fromMap()` methods are correctly implemented in your models for Firestore conversion.
+10. **Error Handling**: Implement basic error handling (e.g., `try-catch`) around Firestore calls where necessary.
+11. **Imports**: Keep imports organized and specific.
+
+Adhering to this structure ensures consistency, testability, and proper integration with Firestore and Riverpod.

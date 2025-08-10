@@ -1,0 +1,12 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# AI Rules for Cursor
+
+- Always follow the architecture, tech stack, and app flow rules.
+- Keep code modular and easy to test.
+- Stick to the UI guidelines.
+- Optimize for performance and battery life.
+- Minimize boilerplate by using Flutter conventions.

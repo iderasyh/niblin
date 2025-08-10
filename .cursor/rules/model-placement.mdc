@@ -1,0 +1,12 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Model Placement and Serialization Rules
+
+- All data models must be placed within the `domain` folder of their corresponding feature directory.
+- The structure should follow: `lib/src/features/[feature_name]/domain/[model_name].dart`.
+- Models **must not** use the `freezed` or `json_serializable` packages. Implement serialization and immutability manually or using other appropriate methods if required.
+
+This rule ensures consistency in project structure and avoids specific dependencies for model generation, aligning with the guidelines in [project-architecture-structure.mdc](mdc:.cursor/rules/project-architecture-structure.mdc).

@@ -1,0 +1,23 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+- Feature-first clean architecture:  
+/assets # Images, fonts, and other static assets
+ /lib
+ /features
+  /[feature]
+   /application # Service classes handling the complex logics /domain # Data models for products, orders, etc, based on each feature we have
+   /data # Repositiories
+   /presentation
+    /screens # UI screens
+    /widgets # Widgets of this feature
+    /controllers # State management and controllers
+/core
+ /constants # Constant values such as brand colors or sizes
+ /utils
+ /common_widgets # Reusable widgets across different features
+/app_bootstrap # App starting logic
+/routing # Routing logic using go_router package
+/theme # Light and dark theme customization and an extension which we will use that will automatically decide to whether get the dark or light color brands based on the system theme mode.

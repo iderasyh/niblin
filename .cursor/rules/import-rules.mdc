@@ -1,0 +1,39 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Import Style Rules
+
+To maintain consistency and readability across the project, follow these import conventions:
+
+1.  **Use Relative Paths for Internal Imports**: When importing files from within the `lib/src/` directory of this project (`niblin`), always use relative paths instead of absolute package paths.
+
+    *   **Incorrect (Avoid):**
+        ```dart
+        import 'package:niblin/src/core/constants/app_colors.dart';
+        ```
+
+    *   **Correct (Use):**
+        ```dart
+        // Example: Importing assets_manager.dart from a feature widget
+        import'../../core/constants/app_colors.dart';
+        ```
+
+2.  **Standard Import Order**: Group and order imports as follows:
+    *   `dart:` imports
+    *   `package:` imports (external packages)
+    *   Project-relative imports (internal files)
+
+    *Example:*
+    ```dart
+    import 'dart:async';
+
+    import 'package:flutter/material.dart';
+    import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+    import '../../core/constants/app_colors.dart';
+    import '../widgets/custom_button.dart';
+    ```
+
+Adhering to these rules helps keep the codebase organized and makes navigating dependencies easier.

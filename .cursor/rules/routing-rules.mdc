@@ -1,0 +1,11 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Routing rules
+
+- Always use [app_router.dart](mdc:lib/src/routing/app_router.dart) for routing definitions.
+- Navigation is handled by the `go_router` package.
+- Route names and paths are defined in the `AppRoute` enum within [app_router.dart](mdc:lib/src/routing/app_router.dart).
+- Always navigate using `context.goNamed(AppRoute.routeName.name)` where `routeName` is a member of the `AppRoute` enum.
