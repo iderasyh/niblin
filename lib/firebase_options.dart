@@ -3,6 +3,7 @@
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
+import 'package:niblin/src/core/utils/env.dart';
 
 /// Default [FirebaseOptions] for use with your Firebase apps.
 ///
@@ -46,8 +47,8 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyAFSwdw8OhrGACoLyR8NNRtjLIpKx0-Usc',
+  static FirebaseOptions web = FirebaseOptions(
+    apiKey: Env.firebaseBrowserKey,
     appId: '1:852554518025:web:80438ae435a395e22d32d8',
     messagingSenderId: '852554518025',
     projectId: 'niblin-app',
@@ -56,16 +57,16 @@ class DefaultFirebaseOptions {
     measurementId: 'G-PVRK1BBRV1',
   );
 
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCijJpRyRw240DCHTOiaQ-rXt1dRKio_RI',
+  static FirebaseOptions android = FirebaseOptions(
+    apiKey: Env.firebaseAndroidKey,
     appId: '1:852554518025:android:33d94956252336ea2d32d8',
     messagingSenderId: '852554518025',
     projectId: 'niblin-app',
     storageBucket: 'niblin-app.firebasestorage.app',
   );
 
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyD4I8OIqLwRLIg59nCNZV73qUyFR8RXsqI',
+  static FirebaseOptions ios = FirebaseOptions(
+    apiKey: Env.firebaseIosKey,
     appId: '1:852554518025:ios:11a10f2e07c7a4182d32d8',
     messagingSenderId: '852554518025',
     projectId: 'niblin-app',
