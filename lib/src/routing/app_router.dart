@@ -3,7 +3,8 @@ import 'package:go_router/go_router.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../features/auth/data/firebase_auth_repository.dart';
-import '../features/onboarding/presentation/screens/welcome_screen.dart';
+import '../features/onboarding/presentation/screens/emotional_hook_screen.dart';
+import '../features/onboarding/presentation/screens/onboarding_screen.dart';
 import 'go_router_refresh_stream.dart';
 
 // --- AppRoute Enum ---
@@ -14,7 +15,10 @@ enum AppRoute {
   signIn('/sign-in'),
   signUp('/sign-up'),
   forgotPassword('/forgot-password'),
-  changePassword('/change-password');
+  changePassword('/change-password'),
+
+  // Onboarding
+  onboarding('/onboarding');
 
   const AppRoute(this.path);
   final String path;
@@ -24,9 +28,6 @@ enum AppRoute {
 // Use separate keys for the root navigator and the shell navigator
 final GlobalKey<NavigatorState> rootNavigatorKey = GlobalKey<NavigatorState>(
   debugLabel: 'root',
-);
-final GlobalKey<NavigatorState> _shellNavigatorKey = GlobalKey<NavigatorState>(
-  debugLabel: 'shell',
 );
 
 final goRouterProvider = Provider<GoRouter>((ref) {
@@ -39,7 +40,12 @@ final goRouterProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: AppRoute.welcome.path,
         name: AppRoute.welcome.name,
-        builder: (context, state) => const WelcomeScreen(),
+        builder: (context, state) => const EmotionalHookScreen(),
+      ),
+      GoRoute(
+        path: AppRoute.onboarding.path,
+        name: AppRoute.onboarding.name,
+        builder: (context, state) => const OnboardingScreen(),
       ),
     ],
   );
