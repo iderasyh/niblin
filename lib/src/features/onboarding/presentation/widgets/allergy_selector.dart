@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../../core/constants/app_colors.dart';
 import '../../application/onboarding_controller.dart';
 import '../../domain/allergen.dart';
 import '../../../../../l10n/app_localizations.dart';
@@ -20,6 +21,7 @@ class AllergySelector extends ConsumerWidget {
         label: Text(label),
         selected: selected,
         onSelected: (_) => controller.toggleAllergen(allergen),
+        selectedColor: AppColors.tertiary,
       );
     }
 

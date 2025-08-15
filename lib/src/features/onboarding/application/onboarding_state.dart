@@ -57,6 +57,8 @@ class OnboardingState {
     return hasName && hasValidDob && hasSelectedDateOfBirth && hasSelectedFeedingStyle;
   }
 
+  bool get hasSelectedGoals => babyProfile.goals.isNotEmpty;
+
   double get progressFraction {
     final index = OnboardingStep.values.indexOf(currentStep) + 1;
     return index / totalSteps;

@@ -8,6 +8,7 @@ import '../../../../core/common_widgets.dart/back_arrow.dart';
 import '../../../../core/utils/responsive_utils.dart';
 import '../../../../routing/app_router.dart';
 import '../../application/onboarding_controller.dart';
+import '../../application/onboarding_state.dart';
 import '../../domain/onboarding_step.dart';
 import '../widgets/onboarding_cta_button.dart';
 import 'allergies_preferences_screen.dart';
@@ -169,9 +170,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen>
                   position: _slideCta,
                   child: OnboardingCtaButton(
                     label: _getCtaLabel(state.currentStep),
-                    isEnabled: state.currentStep != OnboardingStep.babyProfile
-                        ? true
-                        : state.isProfileComplete,
+                    isEnabled: _isCtaEnabled(state),
                     onPressed: () {
                       HapticFeedback.mediumImpact();
                       _pageController.nextPage(
@@ -190,6 +189,17 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen>
         ),
       ),
     );
+  }
+
+  bool _isCtaEnabled(OnboardingState state) {
+    switch (state.currentStep) {
+      case OnboardingStep.babyProfile:
+        return state.isProfileComplete;
+      case OnboardingStep.goals:
+        return state.hasSelectedGoals;
+      default:
+        return true;
+    }
   }
 
   String _getCtaLabel(OnboardingStep currentStep) {

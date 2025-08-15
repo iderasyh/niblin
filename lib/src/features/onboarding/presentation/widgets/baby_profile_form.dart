@@ -55,6 +55,7 @@ class _BabyProfileFormState extends ConsumerState<BabyProfileForm> {
         children: [
           TextFormField(
             controller: _nameController,
+            textCapitalization: TextCapitalization.words,
             decoration: InputDecoration(
               labelText: l10n.onboarding_screen5_field_name,
               errorText: state.nameError,
