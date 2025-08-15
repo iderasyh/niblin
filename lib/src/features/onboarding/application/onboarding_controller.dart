@@ -56,12 +56,14 @@ class OnboardingController extends _$OnboardingController {
     state = state.copyWith(
       babyProfile: state.babyProfile.copyWith(dateOfBirth: date),
       dateOfBirthError: dobError,
+      hasSelectedDateOfBirth: true,
     );
   }
 
   void updateFeedingStyle(FeedingStyle style) {
     state = state.copyWith(
       babyProfile: state.babyProfile.copyWith(feedingStyle: style),
+      hasSelectedFeedingStyle: true,
     );
   }
 

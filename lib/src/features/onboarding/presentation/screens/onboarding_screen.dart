@@ -140,21 +140,26 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen>
               ),
               SizedBox(height: ResponsiveUtils.spacing24),
               Expanded(
-                child: PageView(
-                  controller: _pageController,
-                  physics: const NeverScrollableScrollPhysics(),
-                  children: [
-                    const FactOneScreen(),
-                    const RelatableProblemScreen(),
-                    const FeatureBenefitsScreen(),
-                    const BabyProfileScreen(),
-                    const FactTwoScreen(),
-                    const AllergiesPreferencesScreen(),
-                    const FactThreeScreen(),
-                    const GoalsScreen(),
-                    const LockedPreviewScreen(),
-                    const PaywallScreen(),
-                  ],
+                child: LayoutBuilder(
+                  builder: (context, constraints) {
+                    final double pageHeight = constraints.maxHeight;
+                    return PageView(
+                      controller: _pageController,
+                      physics: const NeverScrollableScrollPhysics(),
+                      children: [
+                        const FactOneScreen(),
+                        const RelatableProblemScreen(),
+                        const FeatureBenefitsScreen(),
+                        BabyProfileScreen(availableHeight: pageHeight),
+                        const FactTwoScreen(),
+                        const AllergiesPreferencesScreen(),
+                        const FactThreeScreen(),
+                        const GoalsScreen(),
+                        const LockedPreviewScreen(),
+                        const PaywallScreen(),
+                      ],
+                    );
+                  },
                 ),
               ),
               SizedBox(height: ResponsiveUtils.spacing24),
@@ -164,6 +169,9 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen>
                   position: _slideCta,
                   child: OnboardingCtaButton(
                     label: _getCtaLabel(state.currentStep),
+                    isEnabled: state.currentStep != OnboardingStep.babyProfile
+                        ? true
+                        : state.isProfileComplete,
                     onPressed: () {
                       HapticFeedback.mediumImpact();
                       _pageController.nextPage(
@@ -194,19 +202,19 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen>
       case OnboardingStep.featureBenefits:
         return l10n.onboarding_screen4_cta;
       case OnboardingStep.babyProfile:
-        return l10n.onboarding_screen5_cta;
+        return l10n.continueButton;
       case OnboardingStep.factTwo:
-        return l10n.onboarding_screen6_cta;
+        return l10n.next;
       case OnboardingStep.allergiesPreferences:
-        return l10n.onboarding_screen7_cta;
+        return l10n.next;
       case OnboardingStep.factThree:
-        return l10n.onboarding_screen8_cta;
+        return l10n.continueButton;
       case OnboardingStep.goals:
-        return l10n.onboarding_screen9_cta;
+        return l10n.continueButton;
       case OnboardingStep.lockedPreview:
-        return l10n.onboarding_screen10_cta;
+        return l10n.unlockMyPlan;
       case OnboardingStep.paywall:
-        return l10n.onboarding_screen11_cta;
+        return l10n.unlockMyPlan;
       case OnboardingStep.factOne:
         return l10n.onboarding_screen2_cta;
     }

@@ -212,11 +212,41 @@ abstract class AppLocalizations {
   /// **'Feeding style (Purees, BLW, Mixed)'**
   String get onboarding_screen5_field_feeding_style;
 
-  /// No description provided for @onboarding_screen5_cta.
+  /// No description provided for @nameRequired.
   ///
   /// In en, this message translates to:
-  /// **'Continue'**
-  String get onboarding_screen5_cta;
+  /// **'Name required'**
+  String get nameRequired;
+
+  /// No description provided for @purees.
+  ///
+  /// In en, this message translates to:
+  /// **'Purees'**
+  String get purees;
+
+  /// No description provided for @blw.
+  ///
+  /// In en, this message translates to:
+  /// **'BLW'**
+  String get blw;
+
+  /// No description provided for @mixed.
+  ///
+  /// In en, this message translates to:
+  /// **'Mixed'**
+  String get mixed;
+
+  /// No description provided for @pleaseSelectAFeedingStyle.
+  ///
+  /// In en, this message translates to:
+  /// **'Please select a feeding style'**
+  String get pleaseSelectAFeedingStyle;
+
+  /// No description provided for @selectDateOfBirth.
+  ///
+  /// In en, this message translates to:
+  /// **'Select date of birth'**
+  String get selectDateOfBirth;
 
   /// No description provided for @onboarding_screen6_headline.
   ///
@@ -229,12 +259,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'We tailor recipes to your baby’s stage to fuel growth and learning.'**
   String get onboarding_screen6_subtext;
-
-  /// No description provided for @onboarding_screen6_cta.
-  ///
-  /// In en, this message translates to:
-  /// **'Next'**
-  String get onboarding_screen6_cta;
 
   /// No description provided for @onboarding_screen7_headline.
   ///
@@ -272,12 +296,6 @@ abstract class AppLocalizations {
   /// **'Other (multi-select)'**
   String get onboarding_screen7_option_other;
 
-  /// No description provided for @onboarding_screen7_cta.
-  ///
-  /// In en, this message translates to:
-  /// **'Next'**
-  String get onboarding_screen7_cta;
-
   /// No description provided for @onboarding_screen8_headline.
   ///
   /// In en, this message translates to:
@@ -289,12 +307,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'We guide you on the right foods, at the right time.'**
   String get onboarding_screen8_subtext;
-
-  /// No description provided for @onboarding_screen8_cta.
-  ///
-  /// In en, this message translates to:
-  /// **'Continue'**
-  String get onboarding_screen8_cta;
 
   /// No description provided for @onboarding_screen9_headline.
   ///
@@ -362,12 +374,6 @@ abstract class AppLocalizations {
   /// **'Apple Cinnamon Mash'**
   String get onboarding_screen10_recipe3;
 
-  /// No description provided for @onboarding_screen10_cta.
-  ///
-  /// In en, this message translates to:
-  /// **'Unlock My Plan'**
-  String get onboarding_screen10_cta;
-
   /// No description provided for @onboarding_screen11_headline.
   ///
   /// In en, this message translates to:
@@ -409,12 +415,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Cancel anytime. 7-day money-back guarantee.'**
   String get onboarding_screen11_guarantee;
-
-  /// No description provided for @onboarding_screen11_cta.
-  ///
-  /// In en, this message translates to:
-  /// **'Unlock My Plan'**
-  String get onboarding_screen11_cta;
 
   /// No description provided for @welcomeBack.
   ///
@@ -541,6 +541,36 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Retry'**
   String get retry;
+
+  /// No description provided for @cancel.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get cancel;
+
+  /// No description provided for @continueButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue'**
+  String get continueButton;
+
+  /// No description provided for @next.
+  ///
+  /// In en, this message translates to:
+  /// **'Next'**
+  String get next;
+
+  /// No description provided for @done.
+  ///
+  /// In en, this message translates to:
+  /// **'Done'**
+  String get done;
+
+  /// No description provided for @unlockMyPlan.
+  ///
+  /// In en, this message translates to:
+  /// **'Unlock My Plan'**
+  String get unlockMyPlan;
 
   /// No description provided for @noUserIsCurrentlyLoggedIn.
   ///

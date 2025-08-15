@@ -72,10 +72,26 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String get onboarding_screen5_field_feeding_style =>
-      'Mënyra e ushqyerjes (Pure, BLW, e përzier)';
+      'Mënyra e ushqyerjes (Pure, BLW, e Kombinuar)';
 
   @override
-  String get onboarding_screen5_cta => 'Vazhdo';
+  String get nameRequired => 'Emri është i nevojshëm';
+
+  @override
+  String get purees => 'Pure';
+
+  @override
+  String get blw => 'BLW';
+
+  @override
+  String get mixed => 'I kombinuar';
+
+  @override
+  String get pleaseSelectAFeedingStyle =>
+      'Ju lutemi zgjidhni një stil ushqyerjeje';
+
+  @override
+  String get selectDateOfBirth => 'Zgjidh datën e lindjes';
 
   @override
   String get onboarding_screen6_headline =>
@@ -84,9 +100,6 @@ class AppLocalizationsSq extends AppLocalizations {
   @override
   String get onboarding_screen6_subtext =>
       'Ne përshtatim recetat sipas moshës së foshnjës tuaj për të nxitur zhvillimin dhe të mësuarit.';
-
-  @override
-  String get onboarding_screen6_cta => 'Tjetra';
 
   @override
   String get onboarding_screen7_headline =>
@@ -108,18 +121,12 @@ class AppLocalizationsSq extends AppLocalizations {
   String get onboarding_screen7_option_other => 'Të tjera (multi-zgjedhje)';
 
   @override
-  String get onboarding_screen7_cta => 'Tjetra';
-
-  @override
   String get onboarding_screen8_headline =>
       'Prezantimi i shumëllojshmërisë herët mund të parandalojë ushqyerjen me zgjedhje më vonë.';
 
   @override
   String get onboarding_screen8_subtext =>
       'Ne ju udhëzojmë për ushqimet e duhura, në kohën e duhur.';
-
-  @override
-  String get onboarding_screen8_cta => 'Vazhdo';
 
   @override
   String get onboarding_screen9_headline => 'Çfarë ka më shumë rëndësi për ju?';
@@ -159,9 +166,6 @@ class AppLocalizationsSq extends AppLocalizations {
   String get onboarding_screen10_recipe3 => 'Pure molle me kanellë';
 
   @override
-  String get onboarding_screen10_cta => 'Zhblloko planin tim';
-
-  @override
   String get onboarding_screen11_headline =>
       'Jepini foshnjës tuaj fillimin më të mirë — pa stres.';
 
@@ -186,9 +190,6 @@ class AppLocalizationsSq extends AppLocalizations {
   @override
   String get onboarding_screen11_guarantee =>
       'Anulo kur të duash. Garanci 7-ditore për kthimin e parave.';
-
-  @override
-  String get onboarding_screen11_cta => 'Zhblloko planin tim';
 
   @override
   String get welcomeBack => 'Mirë se erdhët';
@@ -255,6 +256,21 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String get retry => 'Provo Përsëri';
+
+  @override
+  String get cancel => 'Anullo';
+
+  @override
+  String get continueButton => 'Vazhdo';
+
+  @override
+  String get next => 'Tjetra';
+
+  @override
+  String get done => 'Vazhdo';
+
+  @override
+  String get unlockMyPlan => 'Zhblloko planin tim';
 
   @override
   String get noUserIsCurrentlyLoggedIn =>

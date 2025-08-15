@@ -73,7 +73,22 @@ class AppLocalizationsEn extends AppLocalizations {
       'Feeding style (Purees, BLW, Mixed)';
 
   @override
-  String get onboarding_screen5_cta => 'Continue';
+  String get nameRequired => 'Name required';
+
+  @override
+  String get purees => 'Purees';
+
+  @override
+  String get blw => 'BLW';
+
+  @override
+  String get mixed => 'Mixed';
+
+  @override
+  String get pleaseSelectAFeedingStyle => 'Please select a feeding style';
+
+  @override
+  String get selectDateOfBirth => 'Select date of birth';
 
   @override
   String get onboarding_screen6_headline =>
@@ -82,9 +97,6 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get onboarding_screen6_subtext =>
       'We tailor recipes to your baby’s stage to fuel growth and learning.';
-
-  @override
-  String get onboarding_screen6_cta => 'Next';
 
   @override
   String get onboarding_screen7_headline =>
@@ -106,18 +118,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get onboarding_screen7_option_other => 'Other (multi-select)';
 
   @override
-  String get onboarding_screen7_cta => 'Next';
-
-  @override
   String get onboarding_screen8_headline =>
       'Introducing variety early can prevent picky eating later.';
 
   @override
   String get onboarding_screen8_subtext =>
       'We guide you on the right foods, at the right time.';
-
-  @override
-  String get onboarding_screen8_cta => 'Continue';
 
   @override
   String get onboarding_screen9_headline => 'What matters most to you?';
@@ -155,9 +161,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get onboarding_screen10_recipe3 => 'Apple Cinnamon Mash';
 
   @override
-  String get onboarding_screen10_cta => 'Unlock My Plan';
-
-  @override
   String get onboarding_screen11_headline =>
       'Give your baby the best start — without the stress.';
 
@@ -181,9 +184,6 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get onboarding_screen11_guarantee =>
       'Cancel anytime. 7-day money-back guarantee.';
-
-  @override
-  String get onboarding_screen11_cta => 'Unlock My Plan';
 
   @override
   String get welcomeBack => 'Welcome back';
@@ -248,6 +248,21 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get retry => 'Retry';
+
+  @override
+  String get cancel => 'Cancel';
+
+  @override
+  String get continueButton => 'Continue';
+
+  @override
+  String get next => 'Next';
+
+  @override
+  String get done => 'Done';
+
+  @override
+  String get unlockMyPlan => 'Unlock My Plan';
 
   @override
   String get noUserIsCurrentlyLoggedIn => 'No User Is Currently Logged In';

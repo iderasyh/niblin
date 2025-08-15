@@ -9,24 +9,51 @@ class OnboardingCtaButton extends StatelessWidget {
     required this.label,
     required this.onPressed,
     this.isLoading = false,
+    this.isEnabled = true,
   });
 
   final String label;
   final VoidCallback onPressed;
   final bool isLoading;
+  final bool isEnabled;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
       child: ElevatedButton(
-        onPressed: isLoading ? null : onPressed,
+        onPressed: (isLoading || !isEnabled) ? null : onPressed,
         style: ButtonStyle(
-          backgroundColor: WidgetStateProperty.all(AppColors.primary),
-          foregroundColor: WidgetStateProperty.all(AppColors.textOnButton),
-          overlayColor: WidgetStateProperty.all(AppColors.primary),
-          shadowColor: WidgetStateProperty.all(AppColors.primary),
-          surfaceTintColor: WidgetStateProperty.all(AppColors.primary),
+          backgroundColor: WidgetStateProperty.resolveWith((states) {
+            if (states.contains(WidgetState.disabled)) {
+              return Colors.grey.shade300;
+            }
+            return AppColors.primary;
+          }),
+          foregroundColor: WidgetStateProperty.resolveWith((states) {
+            if (states.contains(WidgetState.disabled)) {
+              return Colors.grey.shade600;
+            }
+            return AppColors.textOnButton;
+          }),
+          overlayColor: WidgetStateProperty.resolveWith((states) {
+            if (states.contains(WidgetState.disabled)) {
+              return Colors.transparent;
+            }
+            return AppColors.primary;
+          }),
+          shadowColor: WidgetStateProperty.resolveWith((states) {
+            if (states.contains(WidgetState.disabled)) {
+              return Colors.transparent;
+            }
+            return AppColors.primary;
+          }),
+          surfaceTintColor: WidgetStateProperty.resolveWith((states) {
+            if (states.contains(WidgetState.disabled)) {
+              return Colors.grey.shade300;
+            }
+            return AppColors.primary;
+          }),
           textStyle: WidgetStateProperty.all(
             Theme.of(context).textTheme.titleLarge,
           ),

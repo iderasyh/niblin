@@ -21,12 +21,17 @@
   "onboarding_screen5_headline": "Le të fillojmë me të voglin tuaj.",
   "onboarding_screen5_field_name": "Emri i foshnjës",
   "onboarding_screen5_field_dob": "Data e lindjes",
-  "onboarding_screen5_field_feeding_style": "Mënyra e ushqyerjes (Pure, BLW, e përzier)",
+  "onboarding_screen5_field_feeding_style": "Mënyra e ushqyerjes (Pure, BLW, e Kombinuar)",
   "onboarding_screen5_cta": "Vazhdo",
+  "nameRequired": "Emri është i nevojshëm",
+  "purees": "Pure",
+  "blw": "BLW",
+  "mixed": "I kombinuar",
+  "pleaseSelectAFeedingStyle": "Ju lutemi zgjidhni një stil ushqyerjeje",
+  "selectDateOfBirth": "Zgjidh datën e lindjes",
 
   "onboarding_screen6_headline": "90% e zhvillimit të trurit ndodh deri në moshën 5 vjeç.",
   "onboarding_screen6_subtext": "Ne përshtatim recetat sipas moshës së foshnjës tuaj për të nxitur zhvillimin dhe të mësuarit.",
-  "onboarding_screen6_cta": "Tjetra",
 
   "onboarding_screen7_headline": "A ka alergji apo preferenca që duhet t’i dimë?",
   "onboarding_screen7_option_dairy": "Qumështi",
@@ -34,11 +39,9 @@
   "onboarding_screen7_option_peanuts": "Kikirikët",
   "onboarding_screen7_option_wheat": "Gruri",
   "onboarding_screen7_option_other": "Të tjera (multi-zgjedhje)",
-  "onboarding_screen7_cta": "Tjetra",
 
   "onboarding_screen8_headline": "Prezantimi i shumëllojshmërisë herët mund të parandalojë ushqyerjen me zgjedhje më vonë.",
   "onboarding_screen8_subtext": "Ne ju udhëzojmë për ushqimet e duhura, në kohën e duhur.",
-  "onboarding_screen8_cta": "Vazhdo",
 
   "onboarding_screen9_headline": "Çfarë ka më shumë rëndësi për ju?",
   "onboarding_screen9_option_growth": "Rritja e shëndetshme",
@@ -52,7 +55,6 @@
   "onboarding_screen10_recipe1": "Tërshërë me banane",
   "onboarding_screen10_recipe2": "Patate të ëmbla në copa",
   "onboarding_screen10_recipe3": "Pure molle me kanellë",
-  "onboarding_screen10_cta": "Zhblloko planin tim",
 
   "onboarding_screen11_headline": "Jepini foshnjës tuaj fillimin më të mirë — pa stres.",
   "onboarding_screen11_bullet1": "Receta të kontrolluara nga ekspertë, për çdo fazë",
@@ -61,7 +63,6 @@
   "onboarding_screen11_bullet4": "Lista blerjesh që kursejnë kohë",
   "onboarding_screen11_pricing_highlight": "Thekso planin vjetor (Kurseni 40%), pastaj opsionin mujor.",
   "onboarding_screen11_guarantee": "Anulo kur të duash. Garanci 7-ditore për kthimin e parave.",
-  "onboarding_screen11_cta": "Zhblloko planin tim",
 
   "welcomeBack": "Mirë se erdhët",
   "signInToContinueToNiblin": "Identifikohu për të vazhduar në Niblin",
@@ -87,6 +88,13 @@
   "sendResetLink": "Dërgo linkun",
 
   "retry": "Provo Përsëri",
+  "cancel": "Anullo",
+  "continueButton": "Vazhdo",
+  "next": "Tjetra",
+  "done": "Vazhdo",
+
+  "unlockMyPlan": "Zhblloko planin tim",
+
   "noUserIsCurrentlyLoggedIn": "Asnjë përdorues nuk është kyçur aktualisht",
   "failedToDeleteAccount": "Dështoi fshirja e llogarisë!",
   "oopsSomethingWentWrongPleaseTryAgain": "Ups! Diçka shkoi gabim. Të lutem provo përsëri"

@@ -13,6 +13,8 @@ class OnboardingState {
     this.dateOfBirthError,
     this.isSaving = false,
     this.errorMessage,
+    this.hasSelectedDateOfBirth = false,
+    this.hasSelectedFeedingStyle = false,
   });
 
   factory OnboardingState.initial() {
@@ -26,6 +28,8 @@ class OnboardingState {
         allergies: const <Allergen>[],
         goals: const <OnboardingGoal>[],
       ),
+      hasSelectedDateOfBirth: false,
+      hasSelectedFeedingStyle: true,
     );
   }
 
@@ -38,8 +42,20 @@ class OnboardingState {
 
   final bool isSaving;
   final String? errorMessage;
+  final bool hasSelectedDateOfBirth;
+  final bool hasSelectedFeedingStyle;
 
   bool get isValidProfile => nameError == null && dateOfBirthError == null;
+
+  // Profile is considered complete when:
+  // - name is non-empty and has no error
+  // - date of birth has no error
+  // - feeding style is selected (always non-null in model)
+  bool get isProfileComplete {
+    final bool hasName = babyProfile.babyName.trim().isNotEmpty;
+    final bool hasValidDob = dateOfBirthError == null;
+    return hasName && hasValidDob && hasSelectedDateOfBirth && hasSelectedFeedingStyle;
+  }
 
   double get progressFraction {
     final index = OnboardingStep.values.indexOf(currentStep) + 1;
@@ -54,6 +70,8 @@ class OnboardingState {
     String? dateOfBirthError,
     bool? isSaving,
     String? errorMessage,
+    bool? hasSelectedDateOfBirth,
+    bool? hasSelectedFeedingStyle,
   }) {
     return OnboardingState(
       currentStep: currentStep ?? this.currentStep,
@@ -63,6 +81,8 @@ class OnboardingState {
       dateOfBirthError: dateOfBirthError,
       isSaving: isSaving ?? this.isSaving,
       errorMessage: errorMessage,
+      hasSelectedDateOfBirth: hasSelectedDateOfBirth ?? this.hasSelectedDateOfBirth,
+      hasSelectedFeedingStyle: hasSelectedFeedingStyle ?? this.hasSelectedFeedingStyle,
     );
   }
 
@@ -76,7 +96,9 @@ class OnboardingState {
         other.nameError == nameError &&
         other.dateOfBirthError == dateOfBirthError &&
         other.isSaving == isSaving &&
-        other.errorMessage == errorMessage;
+        other.errorMessage == errorMessage &&
+        other.hasSelectedDateOfBirth == hasSelectedDateOfBirth &&
+        other.hasSelectedFeedingStyle == hasSelectedFeedingStyle;
   }
 
   @override
@@ -88,6 +110,8 @@ class OnboardingState {
         dateOfBirthError,
         isSaving,
         errorMessage,
+        hasSelectedDateOfBirth,
+        hasSelectedFeedingStyle,
       );
 }
 
