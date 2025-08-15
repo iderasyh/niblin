@@ -50,7 +50,6 @@ void main() async {
 
       // Initialize Firebase
       await Firebase.initializeApp(
-        name: "niblin-app",
         options: DefaultFirebaseOptions.currentPlatform,
       );
 

@@ -61,5 +61,33 @@
   "onboarding_screen11_bullet4": "Lista blerjesh që kursejnë kohë",
   "onboarding_screen11_pricing_highlight": "Thekso planin vjetor (Kurseni 40%), pastaj opsionin mujor.",
   "onboarding_screen11_guarantee": "Anulo kur të duash. Garanci 7-ditore për kthimin e parave.",
-  "onboarding_screen11_cta": "Zhblloko planin tim"
+  "onboarding_screen11_cta": "Zhblloko planin tim",
+
+  "welcomeBack": "Mirë se erdhët",
+  "signInToContinueToNiblin": "Identifikohu për të vazhduar në Niblin",
+  "email": "Email",
+  "youExampleCom": "you@example.com",
+  "emailIsRequired": "Email-i është i nevojshëm",
+  "enterAValidEmail": "Shkruani një email të vlefshëm",
+  "password": "Fjalëkalimi",
+  "passwordIsRequired": "Fjalëkalimi është i nevojshëm",
+  "minimum6Characters": "Minimumi 6 karaktere",
+  "signIn": "IDENTIFIKOHU",
+  "forgotPassword": "HARRUAT FJALËKALIMIN",
+  "continueWithGoogle": "VAZHDONI ME GOOGLE",
+  "continueWithApple": "VAZHDONI ME APPLE",
+  "bySigningInYouAgreeToOur": "Duke u identifikuar, ju pranoni ",
+  "terms": "Kushtet",
+  "and": " dhe ",
+  "privacyPolicy": "Politikën e Privatësisë",
+
+  "passwordResetEmailSent": "Email-i për ndryshimin e fjalëkalimit u dërgua",
+  "forgotPassword": "Keni harruar fjalëkalimin",
+  "enterYourEmailToReceiveAResetLink": "Shkruani email-in tuaj për të marrë një link për të ndryshuar fjalëkalimin",
+  "sendResetLink": "Dërgo linkun",
+
+  "retry": "Provo Përsëri",
+  "noUserIsCurrentlyLoggedIn": "Asnjë përdorues nuk është kyçur aktualisht",
+  "failedToDeleteAccount": "Dështoi fshirja e llogarisë!",
+  "oopsSomethingWentWrongPleaseTryAgain": "Ups! Diçka shkoi gabim. Të lutem provo përsëri"
 }

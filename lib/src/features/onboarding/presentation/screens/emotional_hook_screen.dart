@@ -68,6 +68,7 @@ class EmotionalHookScreen extends ConsumerWidget {
         secondaryButton: TextButton(
           onPressed: () {
             HapticFeedback.mediumImpact();
+            context.goNamed(AppRoute.signIn.name);
           },
           child: Text(
             l10n.onboarding_screen1_secondary_button,

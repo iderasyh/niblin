@@ -189,4 +189,81 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String get onboarding_screen11_cta => 'Zhblloko planin tim';
+
+  @override
+  String get welcomeBack => 'Mirë se erdhët';
+
+  @override
+  String get signInToContinueToNiblin =>
+      'Identifikohu për të vazhduar në Niblin';
+
+  @override
+  String get email => 'Email';
+
+  @override
+  String get youExampleCom => 'you@example.com';
+
+  @override
+  String get emailIsRequired => 'Email-i është i nevojshëm';
+
+  @override
+  String get enterAValidEmail => 'Shkruani një email të vlefshëm';
+
+  @override
+  String get password => 'Fjalëkalimi';
+
+  @override
+  String get passwordIsRequired => 'Fjalëkalimi është i nevojshëm';
+
+  @override
+  String get minimum6Characters => 'Minimumi 6 karaktere';
+
+  @override
+  String get signIn => 'IDENTIFIKOHU';
+
+  @override
+  String get forgotPassword => 'Keni harruar fjalëkalimin';
+
+  @override
+  String get continueWithGoogle => 'VAZHDONI ME GOOGLE';
+
+  @override
+  String get continueWithApple => 'VAZHDONI ME APPLE';
+
+  @override
+  String get bySigningInYouAgreeToOur => 'Duke u identifikuar, ju pranoni ';
+
+  @override
+  String get terms => 'Kushtet';
+
+  @override
+  String get and => ' dhe ';
+
+  @override
+  String get privacyPolicy => 'Politikën e Privatësisë';
+
+  @override
+  String get passwordResetEmailSent =>
+      'Email-i për ndryshimin e fjalëkalimit u dërgua';
+
+  @override
+  String get enterYourEmailToReceiveAResetLink =>
+      'Shkruani email-in tuaj për të marrë një link për të ndryshuar fjalëkalimin';
+
+  @override
+  String get sendResetLink => 'Dërgo linkun';
+
+  @override
+  String get retry => 'Provo Përsëri';
+
+  @override
+  String get noUserIsCurrentlyLoggedIn =>
+      'Asnjë përdorues nuk është kyçur aktualisht';
+
+  @override
+  String get failedToDeleteAccount => 'Dështoi fshirja e llogarisë!';
+
+  @override
+  String get oopsSomethingWentWrongPleaseTryAgain =>
+      'Ups! Diçka shkoi gabim. Të lutem provo përsëri';
 }

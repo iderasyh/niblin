@@ -184,4 +184,78 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get onboarding_screen11_cta => 'Unlock My Plan';
+
+  @override
+  String get welcomeBack => 'Welcome back';
+
+  @override
+  String get signInToContinueToNiblin => 'Sign in to continue to Niblin';
+
+  @override
+  String get email => 'Email';
+
+  @override
+  String get youExampleCom => 'you@example.com';
+
+  @override
+  String get emailIsRequired => 'Email is required';
+
+  @override
+  String get enterAValidEmail => 'Enter a valid email';
+
+  @override
+  String get password => 'Password';
+
+  @override
+  String get passwordIsRequired => 'Password is required';
+
+  @override
+  String get minimum6Characters => 'Minimum 6 characters';
+
+  @override
+  String get signIn => 'SIGN IN';
+
+  @override
+  String get forgotPassword => 'Forgot Password';
+
+  @override
+  String get continueWithGoogle => 'CONTINUE WITH GOOGLE';
+
+  @override
+  String get continueWithApple => 'CONTINUE WITH APPLE';
+
+  @override
+  String get bySigningInYouAgreeToOur => 'By signing in you agree to our ';
+
+  @override
+  String get terms => 'Terms';
+
+  @override
+  String get and => ' and ';
+
+  @override
+  String get privacyPolicy => 'Privacy Policy';
+
+  @override
+  String get passwordResetEmailSent => 'Password reset email sent';
+
+  @override
+  String get enterYourEmailToReceiveAResetLink =>
+      'Enter your email to receive a reset link';
+
+  @override
+  String get sendResetLink => 'Send reset link';
+
+  @override
+  String get retry => 'Retry';
+
+  @override
+  String get noUserIsCurrentlyLoggedIn => 'No User Is Currently Logged In';
+
+  @override
+  String get failedToDeleteAccount => 'Failed to Delete Account';
+
+  @override
+  String get oopsSomethingWentWrongPleaseTryAgain =>
+      'Oops! Something went wrong. Please try again.';
 }

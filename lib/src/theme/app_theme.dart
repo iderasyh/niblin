@@ -63,13 +63,6 @@ class AppTheme {
           color: AppColors.textPrimary,
           size: ResponsiveUtils.iconSize24,
         ),
-
-        shape: Border(
-          bottom: BorderSide(
-            color: AppColors.textSecondary.withValues(alpha: 0.1),
-            width: 1,
-          ),
-        ),
       ),
       cardTheme: CardThemeData(
         color: AppColors.surface,
@@ -137,6 +130,23 @@ class AppTheme {
         prefixIconColor: AppColors.textSecondary,
         suffixIconColor: AppColors.textSecondary,
       ),
+      outlinedButtonTheme: OutlinedButtonThemeData(
+        style: OutlinedButton.styleFrom(
+          side: BorderSide(color: AppColors.primary),
+          padding: EdgeInsets.symmetric(
+            horizontal: ResponsiveUtils.spacing20,
+            vertical: ResponsiveUtils.height16,
+          ),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(ResponsiveUtils.radius16),
+          ),
+          textStyle: GoogleFonts.poppins(
+            fontSize: ResponsiveUtils.fontSize16,
+            fontWeight: FontWeight.w600,
+            letterSpacing: 0.5,
+          ),
+        ),
+      ),
       filledButtonTheme: FilledButtonThemeData(
         style: ButtonStyle(
           backgroundColor: WidgetStateProperty.resolveWith<Color>((states) {
@@ -153,8 +163,8 @@ class AppTheme {
           ),
           padding: WidgetStateProperty.all<EdgeInsets>(
             EdgeInsets.symmetric(
-              vertical: ResponsiveUtils.spacing14,
-              horizontal: ResponsiveUtils.spacing24,
+              vertical: ResponsiveUtils.height16,
+              horizontal: ResponsiveUtils.spacing20,
             ),
           ),
           shape: WidgetStateProperty.all<RoundedRectangleBorder>(

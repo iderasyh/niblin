@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
+import '../app_bootstrap/app_startup.dart';
 import '../features/auth/data/firebase_auth_repository.dart';
+import '../features/auth/presentation/screens/sign_in_screen.dart';
+import '../features/auth/presentation/screens/sign_up_screen.dart';
+import '../features/auth/presentation/screens/forgot_password_screen.dart';
 import '../features/onboarding/presentation/screens/emotional_hook_screen.dart';
 import '../features/onboarding/presentation/screens/onboarding_screen.dart';
 import 'go_router_refresh_stream.dart';
@@ -32,15 +36,54 @@ final GlobalKey<NavigatorState> rootNavigatorKey = GlobalKey<NavigatorState>(
 
 final goRouterProvider = Provider<GoRouter>((ref) {
   final authRepository = ref.read(authRepositoryProvider);
+
+  // rebuild GoRouter when app startup state changes
+  final appStartupState = ref.watch(appStartupProvider);
+
   return GoRouter(
     initialLocation: AppRoute.welcome.path,
     navigatorKey: rootNavigatorKey,
     refreshListenable: GoRouterRefreshStream(authRepository.authStateChanges()),
+    redirect: (context, state) {
+      if (appStartupState.isLoading) {
+        return AppRoute.startup.path;
+      }
+
+      return null;
+    },
     routes: [
+      GoRoute(
+        path: AppRoute.startup.path,
+        pageBuilder: (context, state) => NoTransitionPage(
+          child: AppStartupWidget(
+            // * This is just a placeholder
+            // * The loaded route will be managed by GoRouter on state change
+            onLoaded: (_) => const SizedBox.shrink(),
+          ),
+        ),
+      ),
       GoRoute(
         path: AppRoute.welcome.path,
         name: AppRoute.welcome.name,
         builder: (context, state) => const EmotionalHookScreen(),
+      ),
+
+      GoRoute(
+        path: AppRoute.signIn.path,
+        name: AppRoute.signIn.name,
+        builder: (context, state) => const SignInScreen(),
+        routes: [
+          GoRoute(
+            path: AppRoute.forgotPassword.path,
+            name: AppRoute.forgotPassword.name,
+            builder: (context, state) => const ForgotPasswordScreen(),
+          ),
+        ],
+      ),
+      GoRoute(
+        path: AppRoute.signUp.path,
+        name: AppRoute.signUp.name,
+        builder: (context, state) => const SignUpScreen(),
       ),
       GoRoute(
         path: AppRoute.onboarding.path,

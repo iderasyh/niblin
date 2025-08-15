@@ -415,6 +415,150 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Unlock My Plan'**
   String get onboarding_screen11_cta;
+
+  /// No description provided for @welcomeBack.
+  ///
+  /// In en, this message translates to:
+  /// **'Welcome back'**
+  String get welcomeBack;
+
+  /// No description provided for @signInToContinueToNiblin.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign in to continue to Niblin'**
+  String get signInToContinueToNiblin;
+
+  /// No description provided for @email.
+  ///
+  /// In en, this message translates to:
+  /// **'Email'**
+  String get email;
+
+  /// No description provided for @youExampleCom.
+  ///
+  /// In en, this message translates to:
+  /// **'you@example.com'**
+  String get youExampleCom;
+
+  /// No description provided for @emailIsRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Email is required'**
+  String get emailIsRequired;
+
+  /// No description provided for @enterAValidEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter a valid email'**
+  String get enterAValidEmail;
+
+  /// No description provided for @password.
+  ///
+  /// In en, this message translates to:
+  /// **'Password'**
+  String get password;
+
+  /// No description provided for @passwordIsRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Password is required'**
+  String get passwordIsRequired;
+
+  /// No description provided for @minimum6Characters.
+  ///
+  /// In en, this message translates to:
+  /// **'Minimum 6 characters'**
+  String get minimum6Characters;
+
+  /// No description provided for @signIn.
+  ///
+  /// In en, this message translates to:
+  /// **'SIGN IN'**
+  String get signIn;
+
+  /// No description provided for @forgotPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Forgot Password'**
+  String get forgotPassword;
+
+  /// No description provided for @continueWithGoogle.
+  ///
+  /// In en, this message translates to:
+  /// **'CONTINUE WITH GOOGLE'**
+  String get continueWithGoogle;
+
+  /// No description provided for @continueWithApple.
+  ///
+  /// In en, this message translates to:
+  /// **'CONTINUE WITH APPLE'**
+  String get continueWithApple;
+
+  /// No description provided for @bySigningInYouAgreeToOur.
+  ///
+  /// In en, this message translates to:
+  /// **'By signing in you agree to our '**
+  String get bySigningInYouAgreeToOur;
+
+  /// No description provided for @terms.
+  ///
+  /// In en, this message translates to:
+  /// **'Terms'**
+  String get terms;
+
+  /// No description provided for @and.
+  ///
+  /// In en, this message translates to:
+  /// **' and '**
+  String get and;
+
+  /// No description provided for @privacyPolicy.
+  ///
+  /// In en, this message translates to:
+  /// **'Privacy Policy'**
+  String get privacyPolicy;
+
+  /// No description provided for @passwordResetEmailSent.
+  ///
+  /// In en, this message translates to:
+  /// **'Password reset email sent'**
+  String get passwordResetEmailSent;
+
+  /// No description provided for @enterYourEmailToReceiveAResetLink.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your email to receive a reset link'**
+  String get enterYourEmailToReceiveAResetLink;
+
+  /// No description provided for @sendResetLink.
+  ///
+  /// In en, this message translates to:
+  /// **'Send reset link'**
+  String get sendResetLink;
+
+  /// No description provided for @retry.
+  ///
+  /// In en, this message translates to:
+  /// **'Retry'**
+  String get retry;
+
+  /// No description provided for @noUserIsCurrentlyLoggedIn.
+  ///
+  /// In en, this message translates to:
+  /// **'No User Is Currently Logged In'**
+  String get noUserIsCurrentlyLoggedIn;
+
+  /// No description provided for @failedToDeleteAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to Delete Account'**
+  String get failedToDeleteAccount;
+
+  /// No description provided for @oopsSomethingWentWrongPleaseTryAgain.
+  ///
+  /// In en, this message translates to:
+  /// **'Oops! Something went wrong. Please try again.'**
+  String get oopsSomethingWentWrongPleaseTryAgain;
 }
 
 class _AppLocalizationsDelegate

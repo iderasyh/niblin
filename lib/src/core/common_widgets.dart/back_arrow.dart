@@ -21,7 +21,7 @@ class BackArrow extends StatelessWidget {
   Widget build(BuildContext context) {
     // Use Platform.isIOS to determine the appropriate icon
     final bool isIOS = Platform.isIOS;
-    final iconSize = size ?? ResponsiveUtils.iconSize20;
+    final iconSize = size ?? ResponsiveUtils.iconSize24;
 
     if (isIOS) {
       return IconButton(

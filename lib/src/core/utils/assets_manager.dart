@@ -12,6 +12,8 @@ class AssetsManager {
   static const String onboardingGoals =
       'assets/images/onboarding/goals-icons.png';
 
+  static const String googleIcon = 'assets/images/google_logo.png';
+
   static const String onboardingFactOne =
       'assets/animations/onboarding/baby-outline-glowing-heart-brain.json';
   static const String onboardingFactTwo =
