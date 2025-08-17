@@ -8,7 +8,7 @@ part 'shared_preferences_provider.g.dart';
 
 // Enum class for type safety while saving in local storage
 // and getting from it
-enum SharedPreferencesKeys { locale }
+enum SharedPreferencesKeys { locale, recipes, userRecipesData }
 
 class SharedPreferencesProvider {
   const SharedPreferencesProvider(this._sharedPreferences);

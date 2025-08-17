@@ -118,7 +118,7 @@ class AuthService {
   Future<void> signOut() async {
     try {
       await _authRepository.signOut();
-      ref.read(cacheServiceProvider.notifier).resetState();
+      ref.read(cacheServiceProvider.notifier).clear();
     } catch (e) {
       throw Exception(e);
     }

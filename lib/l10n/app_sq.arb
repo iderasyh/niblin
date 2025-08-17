@@ -97,5 +97,96 @@
 
   "noUserIsCurrentlyLoggedIn": "Asnjë përdorues nuk është kyçur aktualisht",
   "failedToDeleteAccount": "Dështoi fshirja e llogarisë!",
-  "oopsSomethingWentWrongPleaseTryAgain": "Ups! Diçka shkoi gabim. Të lutem provo përsëri"
+  "oopsSomethingWentWrongPleaseTryAgain": "Ups! Diçka shkoi gabim. Të lutem provo përsëri",
+
+  "category_breakfast": "Mëngjes",
+  "category_lunch": "Drekë",
+  "category_dinner": "Darkë",
+  "category_snacks": "Ushqime të lehta",
+  "category_desserts": "Ëmbëlsira",
+  "category_drinks": "Pije",
+
+  "baby_stage_1": "Faza 1: 4-6 muaj",
+  "baby_stage_2": "Faza 2: 6-8 muaj",
+  "baby_stage_3": "Faza 3: 8-12 muaj",
+  "baby_stage_toddler": "Fëmijë: 12-24 muaj",
+
+  "development_benefit_brain": "Zhvillimi i trurit",
+  "development_benefit_immunity": "Imuniteti",
+  "development_benefit_digestive": "Shëndeti i tretjes",
+  "development_benefit_bone": "Rritja e kockave",
+  "development_benefit_eye": "Shëndeti i syve",
+
+  "measurement_unit_metric": "Metrik",
+  "measurement_unit_imperial": "Imperial",
+
+  "recipe_prep_time": "Koha e përgatitjes",
+  "recipe_cook_time": "Koha e gatimit",
+  "recipe_total_time": "Koha totale",
+  "recipe_servings": "Porcionet",
+  "recipe_rating": "Vlerësimi",
+  "recipe_minutes": "min",
+  "recipe_portions": "porcione",
+
+  "recipe_ingredients": "Përbërësit",
+  "recipe_instructions": "Udhëzimet",
+  "recipe_serving_guidance": "Udhëzime për shërbim",
+  "recipe_storage_info": "Ruajtja dhe mbetjet",
+  "recipe_troubleshooting": "Zgjidhja e problemeve",
+  "recipe_why_kids_love_this": "Pse fëmijët e duan këtë",
+  "recipe_nutritional_info": "Informacioni ushqyes",
+  "recipe_development_benefits": "Përfitimet për zhvillim",
+  "recipe_fun_facts": "Fakte të këndshme",
+
+  "recipe_add_to_favorites": "Shto në të preferuarat",
+  "recipe_remove_from_favorites": "Hiq nga të preferuarat",
+  "recipe_add_to_meal_plan": "Shto në planin e vakteve",
+  "recipe_mark_as_tried": "Shëno si të provuar",
+  "recipe_share": "Ndaj recetën",
+  "recipe_personal_notes": "Shënime personale",
+  "recipe_add_note": "Shto një shënim...",
+  "recipe_save_note": "Ruaj shënimin",
+
+  "recipe_search_hint": "Kërko receta...",
+  "recipe_filter_by_category": "Filtro sipas kategorisë",
+  "recipe_filter_by_stage": "Filtro sipas fazës",
+  "recipe_filter_by_allergens": "Filtro sipas alergeneve",
+  "recipe_clear_filters": "Pastro filtrat",
+
+  "recipe_next_suggested": "Receta e ardhshme e sugjeruar",
+  "recipe_related_recipes": "Receta të ngjashme",
+  "recipe_recommended_for_you": "Të rekomanduara për ju",
+
+  "recipe_calories_per_serving": "Kalori për porcion",
+  "recipe_vitamins": "Vitamina",
+  "recipe_minerals": "Minerale",
+
+  "recipe_stage_variations": "Variacionet e fazës",
+  "recipe_texture_guide": "Udhëzuesi i teksturës",
+  "recipe_allergy_warning": "Paralajmërim alergji",
+  "recipe_substitutions": "Zëvendësimet",
+
+  "recipe_error_loading": "Gabim në ngarkimin e recetës",
+  "recipe_error_not_found": "Receta nuk u gjet",
+  "recipe_error_network": "Gabim rrjeti. Ju lutemi kontrolloni lidhjen tuaj.",
+  "recipe_error_try_again": "Provo përsëri",
+  "recipe_offline_message": "Jeni offline. Po shfaqet përmbajtja e ruajtur.",
+
+  "recipe_empty_state_title": "Nuk u gjetën receta",
+  "recipe_empty_state_message": "Provoni të ndryshoni filtrat ose termat e kërkimit",
+  "recipe_empty_favorites_title": "Ende nuk keni receta të preferuara",
+  "recipe_empty_favorites_message": "Shënoni recetat që doni për t'i parë këtu",
+
+  "recipe_loading": "Po ngarkohen recetat...",
+  "recipe_pull_to_refresh": "Tërhiqni për të rifreskuar",
+
+  "recipe_meal_plan_success": "U shtua në planin e vakteve",
+  "recipe_favorite_added": "U shtua në të preferuarat",
+  "recipe_favorite_removed": "U hoq nga të preferuarat",
+  "recipe_tried_marked": "U shënua si e provuar",
+  "recipe_note_saved": "Shënimi u ruajt",
+
+  "recipe_unit_toggle": "Ndrysho njësitë",
+  "recipe_metric_units": "Njësi metrike",
+  "recipe_imperial_units": "Njësi imperiale"
 }

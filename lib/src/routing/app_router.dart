@@ -9,6 +9,8 @@ import '../features/auth/presentation/screens/sign_up_screen.dart';
 import '../features/auth/presentation/screens/forgot_password_screen.dart';
 import '../features/onboarding/presentation/screens/emotional_hook_screen.dart';
 import '../features/onboarding/presentation/screens/onboarding_screen.dart';
+import '../features/recipes/presentation/screens/recipe_list_screen.dart';
+import '../features/recipes/presentation/screens/recipe_detail_screen.dart';
 import 'go_router_refresh_stream.dart';
 
 // --- AppRoute Enum ---
@@ -22,7 +24,11 @@ enum AppRoute {
   changePassword('/change-password'),
 
   // Onboarding
-  onboarding('/onboarding');
+  onboarding('/onboarding'),
+
+  // Recipes
+  recipes('/recipes'),
+  recipeDetail('/recipes/:recipeId');
 
   const AppRoute(this.path);
   final String path;
@@ -89,6 +95,31 @@ final goRouterProvider = Provider<GoRouter>((ref) {
         path: AppRoute.onboarding.path,
         name: AppRoute.onboarding.name,
         builder: (context, state) => const OnboardingScreen(),
+      ),
+
+      // Recipe routes
+      GoRoute(
+        path: AppRoute.recipes.path,
+        name: AppRoute.recipes.name,
+        builder: (context, state) {
+          // Handle optional query parameters for category and search
+          final category = state.uri.queryParameters['category'];
+          final search = state.uri.queryParameters['search'];
+          return RecipeListScreen(
+            initialCategory: category,
+            initialSearch: search,
+          );
+        },
+        routes: [
+          GoRoute(
+            path: '/:recipeId',
+            name: AppRoute.recipeDetail.name,
+            builder: (context, state) {
+              final recipeId = state.pathParameters['recipeId']!;
+              return RecipeDetailScreen(recipeId: recipeId);
+            },
+          ),
+        ],
       ),
     ],
   );

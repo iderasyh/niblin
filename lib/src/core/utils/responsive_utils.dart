@@ -33,6 +33,7 @@ class ResponsiveUtils {
   static double get spacing108 => 108.w;
   static double get spacing112 => 112.w;
   static double get spacing120 => 120.w;
+  static double get spacing160 => 160.w;
   static double get spacing200 => 200.w;
   static double get spacing230 => 230.w;
   static double get spacing280 => 280.w;
@@ -70,6 +71,7 @@ class ResponsiveUtils {
   static double get height160 => 160.h;
   static double get height180 => 180.h;
   static double get height200 => 200.h;
+  static double get height220 => 220.h;
   static double get height230 => 230.h;
   static double get height240 => 240.h;
   static double get height250 => 250.h;
@@ -122,13 +124,18 @@ class ResponsiveUtils {
   static bool get isMediumScreen => screenWidth >= 360 && screenWidth < 768;
   static bool get isLargeScreen => screenWidth >= 768;
 
+  static double get iconSize10 => 10.w;
+  static double get iconSize12 => 12.w;
   static double get iconSize14 => 14.w;
   static double get iconSize16 => 16.w;
-  static double get iconSize24 => 24.w;
-  static double get iconSize32 => 32.w;
-  static double get iconSize48 => 48.w;
-  static double get iconSize64 => 64.w;
   static double get iconSize18 => 18.w;
   static double get iconSize20 => 20.w;
+  static double get iconSize24 => 24.w;
   static double get iconSize28 => 28.w;
+  static double get iconSize32 => 32.w;
+  static double get iconSize36 => 36.w;
+  static double get iconSize40 => 40.w;
+  static double get iconSize44 => 44.w;
+  static double get iconSize48 => 48.w;
+  static double get iconSize64 => 64.w;
 }

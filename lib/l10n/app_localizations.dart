@@ -589,6 +589,456 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Oops! Something went wrong. Please try again.'**
   String get oopsSomethingWentWrongPleaseTryAgain;
+
+  /// No description provided for @category_breakfast.
+  ///
+  /// In en, this message translates to:
+  /// **'Breakfast'**
+  String get category_breakfast;
+
+  /// No description provided for @category_lunch.
+  ///
+  /// In en, this message translates to:
+  /// **'Lunch'**
+  String get category_lunch;
+
+  /// No description provided for @category_dinner.
+  ///
+  /// In en, this message translates to:
+  /// **'Dinner'**
+  String get category_dinner;
+
+  /// No description provided for @category_snacks.
+  ///
+  /// In en, this message translates to:
+  /// **'Snacks'**
+  String get category_snacks;
+
+  /// No description provided for @category_desserts.
+  ///
+  /// In en, this message translates to:
+  /// **'Desserts'**
+  String get category_desserts;
+
+  /// No description provided for @category_drinks.
+  ///
+  /// In en, this message translates to:
+  /// **'Drinks'**
+  String get category_drinks;
+
+  /// No description provided for @baby_stage_1.
+  ///
+  /// In en, this message translates to:
+  /// **'Stage 1: 4-6 months'**
+  String get baby_stage_1;
+
+  /// No description provided for @baby_stage_2.
+  ///
+  /// In en, this message translates to:
+  /// **'Stage 2: 6-8 months'**
+  String get baby_stage_2;
+
+  /// No description provided for @baby_stage_3.
+  ///
+  /// In en, this message translates to:
+  /// **'Stage 3: 8-12 months'**
+  String get baby_stage_3;
+
+  /// No description provided for @baby_stage_toddler.
+  ///
+  /// In en, this message translates to:
+  /// **'Toddler: 12-24 months'**
+  String get baby_stage_toddler;
+
+  /// No description provided for @development_benefit_brain.
+  ///
+  /// In en, this message translates to:
+  /// **'Brain Development'**
+  String get development_benefit_brain;
+
+  /// No description provided for @development_benefit_immunity.
+  ///
+  /// In en, this message translates to:
+  /// **'Immunity'**
+  String get development_benefit_immunity;
+
+  /// No description provided for @development_benefit_digestive.
+  ///
+  /// In en, this message translates to:
+  /// **'Digestive Health'**
+  String get development_benefit_digestive;
+
+  /// No description provided for @development_benefit_bone.
+  ///
+  /// In en, this message translates to:
+  /// **'Bone Growth'**
+  String get development_benefit_bone;
+
+  /// No description provided for @development_benefit_eye.
+  ///
+  /// In en, this message translates to:
+  /// **'Eye Health'**
+  String get development_benefit_eye;
+
+  /// No description provided for @measurement_unit_metric.
+  ///
+  /// In en, this message translates to:
+  /// **'Metric'**
+  String get measurement_unit_metric;
+
+  /// No description provided for @measurement_unit_imperial.
+  ///
+  /// In en, this message translates to:
+  /// **'Imperial'**
+  String get measurement_unit_imperial;
+
+  /// No description provided for @recipe_prep_time.
+  ///
+  /// In en, this message translates to:
+  /// **'Prep time'**
+  String get recipe_prep_time;
+
+  /// No description provided for @recipe_cook_time.
+  ///
+  /// In en, this message translates to:
+  /// **'Cook time'**
+  String get recipe_cook_time;
+
+  /// No description provided for @recipe_total_time.
+  ///
+  /// In en, this message translates to:
+  /// **'Total time'**
+  String get recipe_total_time;
+
+  /// No description provided for @recipe_servings.
+  ///
+  /// In en, this message translates to:
+  /// **'Servings'**
+  String get recipe_servings;
+
+  /// No description provided for @recipe_rating.
+  ///
+  /// In en, this message translates to:
+  /// **'Rating'**
+  String get recipe_rating;
+
+  /// No description provided for @recipe_minutes.
+  ///
+  /// In en, this message translates to:
+  /// **'min'**
+  String get recipe_minutes;
+
+  /// No description provided for @recipe_portions.
+  ///
+  /// In en, this message translates to:
+  /// **'portions'**
+  String get recipe_portions;
+
+  /// No description provided for @recipe_ingredients.
+  ///
+  /// In en, this message translates to:
+  /// **'Ingredients'**
+  String get recipe_ingredients;
+
+  /// No description provided for @recipe_instructions.
+  ///
+  /// In en, this message translates to:
+  /// **'Instructions'**
+  String get recipe_instructions;
+
+  /// No description provided for @recipe_serving_guidance.
+  ///
+  /// In en, this message translates to:
+  /// **'Serving Guidance'**
+  String get recipe_serving_guidance;
+
+  /// No description provided for @recipe_storage_info.
+  ///
+  /// In en, this message translates to:
+  /// **'Storage & Leftovers'**
+  String get recipe_storage_info;
+
+  /// No description provided for @recipe_troubleshooting.
+  ///
+  /// In en, this message translates to:
+  /// **'Troubleshooting'**
+  String get recipe_troubleshooting;
+
+  /// No description provided for @recipe_why_kids_love_this.
+  ///
+  /// In en, this message translates to:
+  /// **'Why Kids Love This'**
+  String get recipe_why_kids_love_this;
+
+  /// No description provided for @recipe_nutritional_info.
+  ///
+  /// In en, this message translates to:
+  /// **'Nutritional Information'**
+  String get recipe_nutritional_info;
+
+  /// No description provided for @recipe_development_benefits.
+  ///
+  /// In en, this message translates to:
+  /// **'Development Benefits'**
+  String get recipe_development_benefits;
+
+  /// No description provided for @recipe_fun_facts.
+  ///
+  /// In en, this message translates to:
+  /// **'Fun Facts'**
+  String get recipe_fun_facts;
+
+  /// No description provided for @recipe_add_to_favorites.
+  ///
+  /// In en, this message translates to:
+  /// **'Add to Favorites'**
+  String get recipe_add_to_favorites;
+
+  /// No description provided for @recipe_remove_from_favorites.
+  ///
+  /// In en, this message translates to:
+  /// **'Remove from Favorites'**
+  String get recipe_remove_from_favorites;
+
+  /// No description provided for @recipe_add_to_meal_plan.
+  ///
+  /// In en, this message translates to:
+  /// **'Add to Meal Plan'**
+  String get recipe_add_to_meal_plan;
+
+  /// No description provided for @recipe_mark_as_tried.
+  ///
+  /// In en, this message translates to:
+  /// **'Mark as Tried'**
+  String get recipe_mark_as_tried;
+
+  /// No description provided for @recipe_share.
+  ///
+  /// In en, this message translates to:
+  /// **'Share Recipe'**
+  String get recipe_share;
+
+  /// No description provided for @recipe_personal_notes.
+  ///
+  /// In en, this message translates to:
+  /// **'Personal Notes'**
+  String get recipe_personal_notes;
+
+  /// No description provided for @recipe_add_note.
+  ///
+  /// In en, this message translates to:
+  /// **'Add a note...'**
+  String get recipe_add_note;
+
+  /// No description provided for @recipe_save_note.
+  ///
+  /// In en, this message translates to:
+  /// **'Save Note'**
+  String get recipe_save_note;
+
+  /// No description provided for @recipe_search_hint.
+  ///
+  /// In en, this message translates to:
+  /// **'Search recipes...'**
+  String get recipe_search_hint;
+
+  /// No description provided for @recipe_filter_by_category.
+  ///
+  /// In en, this message translates to:
+  /// **'Filter by category'**
+  String get recipe_filter_by_category;
+
+  /// No description provided for @recipe_filter_by_stage.
+  ///
+  /// In en, this message translates to:
+  /// **'Filter by stage'**
+  String get recipe_filter_by_stage;
+
+  /// No description provided for @recipe_filter_by_allergens.
+  ///
+  /// In en, this message translates to:
+  /// **'Filter by allergens'**
+  String get recipe_filter_by_allergens;
+
+  /// No description provided for @recipe_clear_filters.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear filters'**
+  String get recipe_clear_filters;
+
+  /// No description provided for @recipe_next_suggested.
+  ///
+  /// In en, this message translates to:
+  /// **'Next Suggested Recipe'**
+  String get recipe_next_suggested;
+
+  /// No description provided for @recipe_related_recipes.
+  ///
+  /// In en, this message translates to:
+  /// **'Related Recipes'**
+  String get recipe_related_recipes;
+
+  /// No description provided for @recipe_recommended_for_you.
+  ///
+  /// In en, this message translates to:
+  /// **'Recommended for You'**
+  String get recipe_recommended_for_you;
+
+  /// No description provided for @recipe_calories_per_serving.
+  ///
+  /// In en, this message translates to:
+  /// **'Calories per serving'**
+  String get recipe_calories_per_serving;
+
+  /// No description provided for @recipe_vitamins.
+  ///
+  /// In en, this message translates to:
+  /// **'Vitamins'**
+  String get recipe_vitamins;
+
+  /// No description provided for @recipe_minerals.
+  ///
+  /// In en, this message translates to:
+  /// **'Minerals'**
+  String get recipe_minerals;
+
+  /// No description provided for @recipe_stage_variations.
+  ///
+  /// In en, this message translates to:
+  /// **'Stage Variations'**
+  String get recipe_stage_variations;
+
+  /// No description provided for @recipe_texture_guide.
+  ///
+  /// In en, this message translates to:
+  /// **'Texture Guide'**
+  String get recipe_texture_guide;
+
+  /// No description provided for @recipe_allergy_warning.
+  ///
+  /// In en, this message translates to:
+  /// **'Allergy Warning'**
+  String get recipe_allergy_warning;
+
+  /// No description provided for @recipe_substitutions.
+  ///
+  /// In en, this message translates to:
+  /// **'Substitutions'**
+  String get recipe_substitutions;
+
+  /// No description provided for @recipe_error_loading.
+  ///
+  /// In en, this message translates to:
+  /// **'Error loading recipe'**
+  String get recipe_error_loading;
+
+  /// No description provided for @recipe_error_not_found.
+  ///
+  /// In en, this message translates to:
+  /// **'Recipe not found'**
+  String get recipe_error_not_found;
+
+  /// No description provided for @recipe_error_network.
+  ///
+  /// In en, this message translates to:
+  /// **'Network error. Please check your connection.'**
+  String get recipe_error_network;
+
+  /// No description provided for @recipe_error_try_again.
+  ///
+  /// In en, this message translates to:
+  /// **'Try again'**
+  String get recipe_error_try_again;
+
+  /// No description provided for @recipe_offline_message.
+  ///
+  /// In en, this message translates to:
+  /// **'You\'re offline. Showing cached content.'**
+  String get recipe_offline_message;
+
+  /// No description provided for @recipe_empty_state_title.
+  ///
+  /// In en, this message translates to:
+  /// **'No recipes found'**
+  String get recipe_empty_state_title;
+
+  /// No description provided for @recipe_empty_state_message.
+  ///
+  /// In en, this message translates to:
+  /// **'Try adjusting your filters or search terms'**
+  String get recipe_empty_state_message;
+
+  /// No description provided for @recipe_empty_favorites_title.
+  ///
+  /// In en, this message translates to:
+  /// **'No favorite recipes yet'**
+  String get recipe_empty_favorites_title;
+
+  /// No description provided for @recipe_empty_favorites_message.
+  ///
+  /// In en, this message translates to:
+  /// **'Heart recipes you love to see them here'**
+  String get recipe_empty_favorites_message;
+
+  /// No description provided for @recipe_loading.
+  ///
+  /// In en, this message translates to:
+  /// **'Loading recipes...'**
+  String get recipe_loading;
+
+  /// No description provided for @recipe_pull_to_refresh.
+  ///
+  /// In en, this message translates to:
+  /// **'Pull to refresh'**
+  String get recipe_pull_to_refresh;
+
+  /// No description provided for @recipe_meal_plan_success.
+  ///
+  /// In en, this message translates to:
+  /// **'Added to meal plan'**
+  String get recipe_meal_plan_success;
+
+  /// No description provided for @recipe_favorite_added.
+  ///
+  /// In en, this message translates to:
+  /// **'Added to favorites'**
+  String get recipe_favorite_added;
+
+  /// No description provided for @recipe_favorite_removed.
+  ///
+  /// In en, this message translates to:
+  /// **'Removed from favorites'**
+  String get recipe_favorite_removed;
+
+  /// No description provided for @recipe_tried_marked.
+  ///
+  /// In en, this message translates to:
+  /// **'Marked as tried'**
+  String get recipe_tried_marked;
+
+  /// No description provided for @recipe_note_saved.
+  ///
+  /// In en, this message translates to:
+  /// **'Note saved'**
+  String get recipe_note_saved;
+
+  /// No description provided for @recipe_unit_toggle.
+  ///
+  /// In en, this message translates to:
+  /// **'Toggle units'**
+  String get recipe_unit_toggle;
+
+  /// No description provided for @recipe_metric_units.
+  ///
+  /// In en, this message translates to:
+  /// **'Metric units'**
+  String get recipe_metric_units;
+
+  /// No description provided for @recipe_imperial_units.
+  ///
+  /// In en, this message translates to:
+  /// **'Imperial units'**
+  String get recipe_imperial_units;
 }
 
 class _AppLocalizationsDelegate

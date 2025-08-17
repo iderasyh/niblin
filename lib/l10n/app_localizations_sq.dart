@@ -282,4 +282,234 @@ class AppLocalizationsSq extends AppLocalizations {
   @override
   String get oopsSomethingWentWrongPleaseTryAgain =>
       'Ups! Diçka shkoi gabim. Të lutem provo përsëri';
+
+  @override
+  String get category_breakfast => 'Mëngjes';
+
+  @override
+  String get category_lunch => 'Drekë';
+
+  @override
+  String get category_dinner => 'Darkë';
+
+  @override
+  String get category_snacks => 'Ushqime të lehta';
+
+  @override
+  String get category_desserts => 'Ëmbëlsira';
+
+  @override
+  String get category_drinks => 'Pije';
+
+  @override
+  String get baby_stage_1 => 'Faza 1: 4-6 muaj';
+
+  @override
+  String get baby_stage_2 => 'Faza 2: 6-8 muaj';
+
+  @override
+  String get baby_stage_3 => 'Faza 3: 8-12 muaj';
+
+  @override
+  String get baby_stage_toddler => 'Fëmijë: 12-24 muaj';
+
+  @override
+  String get development_benefit_brain => 'Zhvillimi i trurit';
+
+  @override
+  String get development_benefit_immunity => 'Imuniteti';
+
+  @override
+  String get development_benefit_digestive => 'Shëndeti i tretjes';
+
+  @override
+  String get development_benefit_bone => 'Rritja e kockave';
+
+  @override
+  String get development_benefit_eye => 'Shëndeti i syve';
+
+  @override
+  String get measurement_unit_metric => 'Metrik';
+
+  @override
+  String get measurement_unit_imperial => 'Imperial';
+
+  @override
+  String get recipe_prep_time => 'Koha e përgatitjes';
+
+  @override
+  String get recipe_cook_time => 'Koha e gatimit';
+
+  @override
+  String get recipe_total_time => 'Koha totale';
+
+  @override
+  String get recipe_servings => 'Porcionet';
+
+  @override
+  String get recipe_rating => 'Vlerësimi';
+
+  @override
+  String get recipe_minutes => 'min';
+
+  @override
+  String get recipe_portions => 'porcione';
+
+  @override
+  String get recipe_ingredients => 'Përbërësit';
+
+  @override
+  String get recipe_instructions => 'Udhëzimet';
+
+  @override
+  String get recipe_serving_guidance => 'Udhëzime për shërbim';
+
+  @override
+  String get recipe_storage_info => 'Ruajtja dhe mbetjet';
+
+  @override
+  String get recipe_troubleshooting => 'Zgjidhja e problemeve';
+
+  @override
+  String get recipe_why_kids_love_this => 'Pse fëmijët e duan këtë';
+
+  @override
+  String get recipe_nutritional_info => 'Informacioni ushqyes';
+
+  @override
+  String get recipe_development_benefits => 'Përfitimet për zhvillim';
+
+  @override
+  String get recipe_fun_facts => 'Fakte të këndshme';
+
+  @override
+  String get recipe_add_to_favorites => 'Shto në të preferuarat';
+
+  @override
+  String get recipe_remove_from_favorites => 'Hiq nga të preferuarat';
+
+  @override
+  String get recipe_add_to_meal_plan => 'Shto në planin e vakteve';
+
+  @override
+  String get recipe_mark_as_tried => 'Shëno si të provuar';
+
+  @override
+  String get recipe_share => 'Ndaj recetën';
+
+  @override
+  String get recipe_personal_notes => 'Shënime personale';
+
+  @override
+  String get recipe_add_note => 'Shto një shënim...';
+
+  @override
+  String get recipe_save_note => 'Ruaj shënimin';
+
+  @override
+  String get recipe_search_hint => 'Kërko receta...';
+
+  @override
+  String get recipe_filter_by_category => 'Filtro sipas kategorisë';
+
+  @override
+  String get recipe_filter_by_stage => 'Filtro sipas fazës';
+
+  @override
+  String get recipe_filter_by_allergens => 'Filtro sipas alergeneve';
+
+  @override
+  String get recipe_clear_filters => 'Pastro filtrat';
+
+  @override
+  String get recipe_next_suggested => 'Receta e ardhshme e sugjeruar';
+
+  @override
+  String get recipe_related_recipes => 'Receta të ngjashme';
+
+  @override
+  String get recipe_recommended_for_you => 'Të rekomanduara për ju';
+
+  @override
+  String get recipe_calories_per_serving => 'Kalori për porcion';
+
+  @override
+  String get recipe_vitamins => 'Vitamina';
+
+  @override
+  String get recipe_minerals => 'Minerale';
+
+  @override
+  String get recipe_stage_variations => 'Variacionet e fazës';
+
+  @override
+  String get recipe_texture_guide => 'Udhëzuesi i teksturës';
+
+  @override
+  String get recipe_allergy_warning => 'Paralajmërim alergji';
+
+  @override
+  String get recipe_substitutions => 'Zëvendësimet';
+
+  @override
+  String get recipe_error_loading => 'Gabim në ngarkimin e recetës';
+
+  @override
+  String get recipe_error_not_found => 'Receta nuk u gjet';
+
+  @override
+  String get recipe_error_network =>
+      'Gabim rrjeti. Ju lutemi kontrolloni lidhjen tuaj.';
+
+  @override
+  String get recipe_error_try_again => 'Provo përsëri';
+
+  @override
+  String get recipe_offline_message =>
+      'Jeni offline. Po shfaqet përmbajtja e ruajtur.';
+
+  @override
+  String get recipe_empty_state_title => 'Nuk u gjetën receta';
+
+  @override
+  String get recipe_empty_state_message =>
+      'Provoni të ndryshoni filtrat ose termat e kërkimit';
+
+  @override
+  String get recipe_empty_favorites_title =>
+      'Ende nuk keni receta të preferuara';
+
+  @override
+  String get recipe_empty_favorites_message =>
+      'Shënoni recetat që doni për t\'i parë këtu';
+
+  @override
+  String get recipe_loading => 'Po ngarkohen recetat...';
+
+  @override
+  String get recipe_pull_to_refresh => 'Tërhiqni për të rifreskuar';
+
+  @override
+  String get recipe_meal_plan_success => 'U shtua në planin e vakteve';
+
+  @override
+  String get recipe_favorite_added => 'U shtua në të preferuarat';
+
+  @override
+  String get recipe_favorite_removed => 'U hoq nga të preferuarat';
+
+  @override
+  String get recipe_tried_marked => 'U shënua si e provuar';
+
+  @override
+  String get recipe_note_saved => 'Shënimi u ruajt';
+
+  @override
+  String get recipe_unit_toggle => 'Ndrysho njësitë';
+
+  @override
+  String get recipe_metric_units => 'Njësi metrike';
+
+  @override
+  String get recipe_imperial_units => 'Njësi imperiale';
 }

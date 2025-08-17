@@ -273,4 +273,233 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get oopsSomethingWentWrongPleaseTryAgain =>
       'Oops! Something went wrong. Please try again.';
+
+  @override
+  String get category_breakfast => 'Breakfast';
+
+  @override
+  String get category_lunch => 'Lunch';
+
+  @override
+  String get category_dinner => 'Dinner';
+
+  @override
+  String get category_snacks => 'Snacks';
+
+  @override
+  String get category_desserts => 'Desserts';
+
+  @override
+  String get category_drinks => 'Drinks';
+
+  @override
+  String get baby_stage_1 => 'Stage 1: 4-6 months';
+
+  @override
+  String get baby_stage_2 => 'Stage 2: 6-8 months';
+
+  @override
+  String get baby_stage_3 => 'Stage 3: 8-12 months';
+
+  @override
+  String get baby_stage_toddler => 'Toddler: 12-24 months';
+
+  @override
+  String get development_benefit_brain => 'Brain Development';
+
+  @override
+  String get development_benefit_immunity => 'Immunity';
+
+  @override
+  String get development_benefit_digestive => 'Digestive Health';
+
+  @override
+  String get development_benefit_bone => 'Bone Growth';
+
+  @override
+  String get development_benefit_eye => 'Eye Health';
+
+  @override
+  String get measurement_unit_metric => 'Metric';
+
+  @override
+  String get measurement_unit_imperial => 'Imperial';
+
+  @override
+  String get recipe_prep_time => 'Prep time';
+
+  @override
+  String get recipe_cook_time => 'Cook time';
+
+  @override
+  String get recipe_total_time => 'Total time';
+
+  @override
+  String get recipe_servings => 'Servings';
+
+  @override
+  String get recipe_rating => 'Rating';
+
+  @override
+  String get recipe_minutes => 'min';
+
+  @override
+  String get recipe_portions => 'portions';
+
+  @override
+  String get recipe_ingredients => 'Ingredients';
+
+  @override
+  String get recipe_instructions => 'Instructions';
+
+  @override
+  String get recipe_serving_guidance => 'Serving Guidance';
+
+  @override
+  String get recipe_storage_info => 'Storage & Leftovers';
+
+  @override
+  String get recipe_troubleshooting => 'Troubleshooting';
+
+  @override
+  String get recipe_why_kids_love_this => 'Why Kids Love This';
+
+  @override
+  String get recipe_nutritional_info => 'Nutritional Information';
+
+  @override
+  String get recipe_development_benefits => 'Development Benefits';
+
+  @override
+  String get recipe_fun_facts => 'Fun Facts';
+
+  @override
+  String get recipe_add_to_favorites => 'Add to Favorites';
+
+  @override
+  String get recipe_remove_from_favorites => 'Remove from Favorites';
+
+  @override
+  String get recipe_add_to_meal_plan => 'Add to Meal Plan';
+
+  @override
+  String get recipe_mark_as_tried => 'Mark as Tried';
+
+  @override
+  String get recipe_share => 'Share Recipe';
+
+  @override
+  String get recipe_personal_notes => 'Personal Notes';
+
+  @override
+  String get recipe_add_note => 'Add a note...';
+
+  @override
+  String get recipe_save_note => 'Save Note';
+
+  @override
+  String get recipe_search_hint => 'Search recipes...';
+
+  @override
+  String get recipe_filter_by_category => 'Filter by category';
+
+  @override
+  String get recipe_filter_by_stage => 'Filter by stage';
+
+  @override
+  String get recipe_filter_by_allergens => 'Filter by allergens';
+
+  @override
+  String get recipe_clear_filters => 'Clear filters';
+
+  @override
+  String get recipe_next_suggested => 'Next Suggested Recipe';
+
+  @override
+  String get recipe_related_recipes => 'Related Recipes';
+
+  @override
+  String get recipe_recommended_for_you => 'Recommended for You';
+
+  @override
+  String get recipe_calories_per_serving => 'Calories per serving';
+
+  @override
+  String get recipe_vitamins => 'Vitamins';
+
+  @override
+  String get recipe_minerals => 'Minerals';
+
+  @override
+  String get recipe_stage_variations => 'Stage Variations';
+
+  @override
+  String get recipe_texture_guide => 'Texture Guide';
+
+  @override
+  String get recipe_allergy_warning => 'Allergy Warning';
+
+  @override
+  String get recipe_substitutions => 'Substitutions';
+
+  @override
+  String get recipe_error_loading => 'Error loading recipe';
+
+  @override
+  String get recipe_error_not_found => 'Recipe not found';
+
+  @override
+  String get recipe_error_network =>
+      'Network error. Please check your connection.';
+
+  @override
+  String get recipe_error_try_again => 'Try again';
+
+  @override
+  String get recipe_offline_message =>
+      'You\'re offline. Showing cached content.';
+
+  @override
+  String get recipe_empty_state_title => 'No recipes found';
+
+  @override
+  String get recipe_empty_state_message =>
+      'Try adjusting your filters or search terms';
+
+  @override
+  String get recipe_empty_favorites_title => 'No favorite recipes yet';
+
+  @override
+  String get recipe_empty_favorites_message =>
+      'Heart recipes you love to see them here';
+
+  @override
+  String get recipe_loading => 'Loading recipes...';
+
+  @override
+  String get recipe_pull_to_refresh => 'Pull to refresh';
+
+  @override
+  String get recipe_meal_plan_success => 'Added to meal plan';
+
+  @override
+  String get recipe_favorite_added => 'Added to favorites';
+
+  @override
+  String get recipe_favorite_removed => 'Removed from favorites';
+
+  @override
+  String get recipe_tried_marked => 'Marked as tried';
+
+  @override
+  String get recipe_note_saved => 'Note saved';
+
+  @override
+  String get recipe_unit_toggle => 'Toggle units';
+
+  @override
+  String get recipe_metric_units => 'Metric units';
+
+  @override
+  String get recipe_imperial_units => 'Imperial units';
 }

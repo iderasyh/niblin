@@ -40,12 +40,15 @@ dependencies:
   google_fonts: 6.3.0
   intl: 0.20.2
   flutter_screenutil: 5.9.3
+  cached_network_image: 3.4.1
+  flutter_cache_manager: ^3.4.1
 
   # Animations
   lottie: 3.3.1
 
   # HTTP
   http: 1.5.0
+  path_provider: ^2.1.4
 
   # Environment
   envied: 1.1.1
@@ -63,6 +66,7 @@ dev_dependencies:
   envied_generator: 1.1.1
   build_runner: 2.4.15
   riverpod_generator: 2.6.4
+  fake_cloud_firestore: ^4.0.0
 
 flutter:
   generate: true

@@ -96,5 +96,96 @@
 
   "noUserIsCurrentlyLoggedIn": "No User Is Currently Logged In",
   "failedToDeleteAccount": "Failed to Delete Account",
-  "oopsSomethingWentWrongPleaseTryAgain": "Oops! Something went wrong. Please try again."
+  "oopsSomethingWentWrongPleaseTryAgain": "Oops! Something went wrong. Please try again.",
+
+  "category_breakfast": "Breakfast",
+  "category_lunch": "Lunch",
+  "category_dinner": "Dinner",
+  "category_snacks": "Snacks",
+  "category_desserts": "Desserts",
+  "category_drinks": "Drinks",
+
+  "baby_stage_1": "Stage 1: 4-6 months",
+  "baby_stage_2": "Stage 2: 6-8 months",
+  "baby_stage_3": "Stage 3: 8-12 months",
+  "baby_stage_toddler": "Toddler: 12-24 months",
+
+  "development_benefit_brain": "Brain Development",
+  "development_benefit_immunity": "Immunity",
+  "development_benefit_digestive": "Digestive Health",
+  "development_benefit_bone": "Bone Growth",
+  "development_benefit_eye": "Eye Health",
+
+  "measurement_unit_metric": "Metric",
+  "measurement_unit_imperial": "Imperial",
+
+  "recipe_prep_time": "Prep time",
+  "recipe_cook_time": "Cook time",
+  "recipe_total_time": "Total time",
+  "recipe_servings": "Servings",
+  "recipe_rating": "Rating",
+  "recipe_minutes": "min",
+  "recipe_portions": "portions",
+
+  "recipe_ingredients": "Ingredients",
+  "recipe_instructions": "Instructions",
+  "recipe_serving_guidance": "Serving Guidance",
+  "recipe_storage_info": "Storage & Leftovers",
+  "recipe_troubleshooting": "Troubleshooting",
+  "recipe_why_kids_love_this": "Why Kids Love This",
+  "recipe_nutritional_info": "Nutritional Information",
+  "recipe_development_benefits": "Development Benefits",
+  "recipe_fun_facts": "Fun Facts",
+
+  "recipe_add_to_favorites": "Add to Favorites",
+  "recipe_remove_from_favorites": "Remove from Favorites",
+  "recipe_add_to_meal_plan": "Add to Meal Plan",
+  "recipe_mark_as_tried": "Mark as Tried",
+  "recipe_share": "Share Recipe",
+  "recipe_personal_notes": "Personal Notes",
+  "recipe_add_note": "Add a note...",
+  "recipe_save_note": "Save Note",
+
+  "recipe_search_hint": "Search recipes...",
+  "recipe_filter_by_category": "Filter by category",
+  "recipe_filter_by_stage": "Filter by stage",
+  "recipe_filter_by_allergens": "Filter by allergens",
+  "recipe_clear_filters": "Clear filters",
+
+  "recipe_next_suggested": "Next Suggested Recipe",
+  "recipe_related_recipes": "Related Recipes",
+  "recipe_recommended_for_you": "Recommended for You",
+
+  "recipe_calories_per_serving": "Calories per serving",
+  "recipe_vitamins": "Vitamins",
+  "recipe_minerals": "Minerals",
+
+  "recipe_stage_variations": "Stage Variations",
+  "recipe_texture_guide": "Texture Guide",
+  "recipe_allergy_warning": "Allergy Warning",
+  "recipe_substitutions": "Substitutions",
+
+  "recipe_error_loading": "Error loading recipe",
+  "recipe_error_not_found": "Recipe not found",
+  "recipe_error_network": "Network error. Please check your connection.",
+  "recipe_error_try_again": "Try again",
+  "recipe_offline_message": "You're offline. Showing cached content.",
+
+  "recipe_empty_state_title": "No recipes found",
+  "recipe_empty_state_message": "Try adjusting your filters or search terms",
+  "recipe_empty_favorites_title": "No favorite recipes yet",
+  "recipe_empty_favorites_message": "Heart recipes you love to see them here",
+
+  "recipe_loading": "Loading recipes...",
+  "recipe_pull_to_refresh": "Pull to refresh",
+
+  "recipe_meal_plan_success": "Added to meal plan",
+  "recipe_favorite_added": "Added to favorites",
+  "recipe_favorite_removed": "Removed from favorites",
+  "recipe_tried_marked": "Marked as tried",
+  "recipe_note_saved": "Note saved",
+
+  "recipe_unit_toggle": "Toggle units",
+  "recipe_metric_units": "Metric units",
+  "recipe_imperial_units": "Imperial units"
 }
