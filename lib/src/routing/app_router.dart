@@ -75,6 +75,7 @@ final goRouterProvider = Provider<GoRouter>((ref) {
 
       // --- Define unauthenticated routes/prefixes ---
       final unauthenticatedPaths = {
+        AppRoute.welcome.path,
         AppRoute.onboarding.path,
         AppRoute.signIn.path,
         AppRoute.signUp.path,
@@ -84,11 +85,11 @@ final goRouterProvider = Provider<GoRouter>((ref) {
       // Redirect logic
       if (!isSignedIn &&
           !unauthenticatedPaths
-              .where((path) => path != AppRoute.onboarding.path)
+              .where((path) => path != AppRoute.welcome.path)
               .any((path) => currentLocation.startsWith(path))) {
         // If not signed in and trying to access a path not in unauthenticatedPaths,
         // redirect to onboarding.
-        return AppRoute.onboarding.path;
+        return AppRoute.welcome.path;
       }
 
       // Check if signed in and trying to access an unauthenticated path (excluding onboarding '/' and paywall)

@@ -76,7 +76,7 @@
   "forgotPassword": "FORGOT PASSWORD",
   "continueWithGoogle": "CONTINUE WITH GOOGLE",
   "continueWithApple": "CONTINUE WITH APPLE",
-  "bySigningInYouAgreeToOur": "By signing in you agree to our ",
+  "byContinuingYouAgreeToOur": "By continuing you agree to our ",
   "terms": "Terms",
   "and": " and ",
   "privacyPolicy": "Privacy Policy",
@@ -187,5 +187,44 @@
 
   "recipe_unit_toggle": "Toggle units",
   "recipe_metric_units": "Metric units",
-  "recipe_imperial_units": "Imperial units"
+  "recipe_imperial_units": "Imperial units",
+
+  "saveBabysPlan": "Save {babyName}'s Plan",
+  "@saveBabysPlan": {
+    "placeholders": {
+      "babyName": {
+        "type": "String"
+      }
+    }
+  },
+  "saveYourPlan": "Save Your Plan",
+  "justOneLastStep": "Just one last step to keep your personalized plan safe and accessible.",
+  "withYourFreeNiblinAccount": "With your free Niblin account, you can:",
+  "access30StarterRecipesBaby": "Access 30 starter recipes chosen specifically for {babyName}'s age.",
+  "@access30StarterRecipesBaby": {
+    "placeholders": {
+      "babyName": {
+        "type": "String"
+      }
+    }
+  },
+  "access30StarterRecipesGeneric": "Access 30 starter recipes chosen specifically for your baby's age.",
+  "niblinsBlog": "Niblin's blog.",
+  "unlockFirstBitesGuide": "Unlock the 'First Bites' guide to get started with confidence.",
+  "or": "or",
+  "continueWithEmail": "Continue with email",
+  "signUpWithEmail": "Sign up with email",
+  "close": "Close",
+  "fullName": "Full Name",
+  "janeDoe": "Jane Doe",
+  "nameIsRequired": "Name is required",
+  "saveBabysPlanAndGetStarted": "Save {babyName}'s Plan & Get Started",
+  "@saveBabysPlanAndGetStarted": {
+    "placeholders": {
+      "babyName": {
+        "type": "String"
+      }
+    }
+  },
+  "saveMyPlanAndGetStarted": "Save My Plan & Get Started"
 }

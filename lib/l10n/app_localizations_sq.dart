@@ -232,7 +232,7 @@ class AppLocalizationsSq extends AppLocalizations {
   String get continueWithApple => 'VAZHDONI ME APPLE';
 
   @override
-  String get bySigningInYouAgreeToOur => 'Duke u identifikuar, ju pranoni ';
+  String get byContinuingYouAgreeToOur => 'Duke vazhduar, ju pranoni ';
 
   @override
   String get terms => 'Kushtet';
@@ -512,4 +512,65 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String get recipe_imperial_units => 'Njësi imperiale';
+
+  @override
+  String saveBabysPlan(String babyName) {
+    return 'Ruaj planin e $babyName';
+  }
+
+  @override
+  String get saveYourPlan => 'Ruaj planin tënd';
+
+  @override
+  String get justOneLastStep =>
+      'Edhe një hap për ta ruajtur planin tuaj të personalizuar.';
+
+  @override
+  String get withYourFreeNiblinAccount =>
+      'Me llogarinë tuaj falas të Niblin, ju mund të:';
+
+  @override
+  String access30StarterRecipesBaby(String babyName) {
+    return 'Aksesoni 30 receta të zgjedhura posaçërisht për moshën e $babyName.';
+  }
+
+  @override
+  String get access30StarterRecipesGeneric =>
+      'Aksesoni 30 receta të zgjedhura posaçërisht për moshën e bebit tuaj.';
+
+  @override
+  String get niblinsBlog => 'Blogu i Niblin.';
+
+  @override
+  String get unlockFirstBitesGuide =>
+      'Guida \'Hapat e Para\' për të filluar ushqyerjen e bebit tuaj me vetëbesim.';
+
+  @override
+  String get or => 'ose';
+
+  @override
+  String get continueWithEmail => 'Vazhdo me email';
+
+  @override
+  String get signUpWithEmail => 'Regjistrohu me email';
+
+  @override
+  String get close => 'Mbyll';
+
+  @override
+  String get fullName => 'Emri i plotë';
+
+  @override
+  String get janeDoe => 'Emri Mbiemri';
+
+  @override
+  String get nameIsRequired => 'Emri është i nevojshëm';
+
+  @override
+  String saveBabysPlanAndGetStarted(String babyName) {
+    return 'Ruaj planin e $babyName & Fillo';
+  }
+
+  @override
+  String get saveMyPlanAndGetStarted => 'Ruaj planin tim & Fillo';
 }

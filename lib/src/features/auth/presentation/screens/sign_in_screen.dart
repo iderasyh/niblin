@@ -221,7 +221,7 @@ class _SignInScreenState extends ConsumerState<SignInScreen> {
                               ?.copyWith(color: AppColors.textSecondary),
                           children: [
                             TextSpan(
-                              text: localizations.bySigningInYouAgreeToOur,
+                              text: localizations.byContinuingYouAgreeToOur,
                             ),
                             TextSpan(
                               text: localizations.terms,

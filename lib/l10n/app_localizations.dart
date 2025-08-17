@@ -494,11 +494,11 @@ abstract class AppLocalizations {
   /// **'CONTINUE WITH APPLE'**
   String get continueWithApple;
 
-  /// No description provided for @bySigningInYouAgreeToOur.
+  /// No description provided for @byContinuingYouAgreeToOur.
   ///
   /// In en, this message translates to:
-  /// **'By signing in you agree to our '**
-  String get bySigningInYouAgreeToOur;
+  /// **'By continuing you agree to our '**
+  String get byContinuingYouAgreeToOur;
 
   /// No description provided for @terms.
   ///
@@ -1039,6 +1039,108 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Imperial units'**
   String get recipe_imperial_units;
+
+  /// No description provided for @saveBabysPlan.
+  ///
+  /// In en, this message translates to:
+  /// **'Save {babyName}\'s Plan'**
+  String saveBabysPlan(String babyName);
+
+  /// No description provided for @saveYourPlan.
+  ///
+  /// In en, this message translates to:
+  /// **'Save Your Plan'**
+  String get saveYourPlan;
+
+  /// No description provided for @justOneLastStep.
+  ///
+  /// In en, this message translates to:
+  /// **'Just one last step to keep your personalized plan safe and accessible.'**
+  String get justOneLastStep;
+
+  /// No description provided for @withYourFreeNiblinAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'With your free Niblin account, you can:'**
+  String get withYourFreeNiblinAccount;
+
+  /// No description provided for @access30StarterRecipesBaby.
+  ///
+  /// In en, this message translates to:
+  /// **'Access 30 starter recipes chosen specifically for {babyName}\'s age.'**
+  String access30StarterRecipesBaby(String babyName);
+
+  /// No description provided for @access30StarterRecipesGeneric.
+  ///
+  /// In en, this message translates to:
+  /// **'Access 30 starter recipes chosen specifically for your baby\'s age.'**
+  String get access30StarterRecipesGeneric;
+
+  /// No description provided for @niblinsBlog.
+  ///
+  /// In en, this message translates to:
+  /// **'Niblin\'s blog.'**
+  String get niblinsBlog;
+
+  /// No description provided for @unlockFirstBitesGuide.
+  ///
+  /// In en, this message translates to:
+  /// **'Unlock the \'First Bites\' guide to get started with confidence.'**
+  String get unlockFirstBitesGuide;
+
+  /// No description provided for @or.
+  ///
+  /// In en, this message translates to:
+  /// **'or'**
+  String get or;
+
+  /// No description provided for @continueWithEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue with email'**
+  String get continueWithEmail;
+
+  /// No description provided for @signUpWithEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign up with email'**
+  String get signUpWithEmail;
+
+  /// No description provided for @close.
+  ///
+  /// In en, this message translates to:
+  /// **'Close'**
+  String get close;
+
+  /// No description provided for @fullName.
+  ///
+  /// In en, this message translates to:
+  /// **'Full Name'**
+  String get fullName;
+
+  /// No description provided for @janeDoe.
+  ///
+  /// In en, this message translates to:
+  /// **'Jane Doe'**
+  String get janeDoe;
+
+  /// No description provided for @nameIsRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Name is required'**
+  String get nameIsRequired;
+
+  /// No description provided for @saveBabysPlanAndGetStarted.
+  ///
+  /// In en, this message translates to:
+  /// **'Save {babyName}\'s Plan & Get Started'**
+  String saveBabysPlanAndGetStarted(String babyName);
+
+  /// No description provided for @saveMyPlanAndGetStarted.
+  ///
+  /// In en, this message translates to:
+  /// **'Save My Plan & Get Started'**
+  String get saveMyPlanAndGetStarted;
 }
 
 class _AppLocalizationsDelegate

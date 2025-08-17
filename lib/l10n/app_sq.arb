@@ -77,7 +77,7 @@
   "forgotPassword": "HARRUAT FJALËKALIMIN",
   "continueWithGoogle": "VAZHDONI ME GOOGLE",
   "continueWithApple": "VAZHDONI ME APPLE",
-  "bySigningInYouAgreeToOur": "Duke u identifikuar, ju pranoni ",
+  "byContinuingYouAgreeToOur": "Duke vazhduar, ju pranoni ",
   "terms": "Kushtet",
   "and": " dhe ",
   "privacyPolicy": "Politikën e Privatësisë",
@@ -188,5 +188,23 @@
 
   "recipe_unit_toggle": "Ndrysho njësitë",
   "recipe_metric_units": "Njësi metrike",
-  "recipe_imperial_units": "Njësi imperiale"
+  "recipe_imperial_units": "Njësi imperiale",
+
+  "saveBabysPlan": "Ruaj planin e {babyName}",
+  "saveYourPlan": "Ruaj planin tënd",
+  "justOneLastStep": "Edhe një hap për ta ruajtur planin tuaj të personalizuar.",
+  "withYourFreeNiblinAccount": "Me llogarinë tuaj falas të Niblin, ju mund të:",
+  "access30StarterRecipesBaby": "Aksesoni 30 receta të zgjedhura posaçërisht për moshën e {babyName}.",
+  "access30StarterRecipesGeneric": "Aksesoni 30 receta të zgjedhura posaçërisht për moshën e bebit tuaj.",
+  "niblinsBlog": "Blogu i Niblin.",
+  "unlockFirstBitesGuide": "Guida 'Hapat e Para' për të filluar ushqyerjen e bebit tuaj me vetëbesim.",
+  "or": "ose",
+  "continueWithEmail": "Vazhdo me email",
+  "signUpWithEmail": "Regjistrohu me email",
+  "close": "Mbyll",
+  "fullName": "Emri i plotë",
+  "janeDoe": "Emri Mbiemri",
+  "nameIsRequired": "Emri është i nevojshëm",
+  "saveBabysPlanAndGetStarted": "Ruaj planin e {babyName} & Fillo",
+  "saveMyPlanAndGetStarted": "Ruaj planin tim & Fillo"
 }

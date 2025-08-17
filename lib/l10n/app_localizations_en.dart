@@ -225,7 +225,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get continueWithApple => 'CONTINUE WITH APPLE';
 
   @override
-  String get bySigningInYouAgreeToOur => 'By signing in you agree to our ';
+  String get byContinuingYouAgreeToOur => 'By continuing you agree to our ';
 
   @override
   String get terms => 'Terms';
@@ -502,4 +502,65 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get recipe_imperial_units => 'Imperial units';
+
+  @override
+  String saveBabysPlan(String babyName) {
+    return 'Save $babyName\'s Plan';
+  }
+
+  @override
+  String get saveYourPlan => 'Save Your Plan';
+
+  @override
+  String get justOneLastStep =>
+      'Just one last step to keep your personalized plan safe and accessible.';
+
+  @override
+  String get withYourFreeNiblinAccount =>
+      'With your free Niblin account, you can:';
+
+  @override
+  String access30StarterRecipesBaby(String babyName) {
+    return 'Access 30 starter recipes chosen specifically for $babyName\'s age.';
+  }
+
+  @override
+  String get access30StarterRecipesGeneric =>
+      'Access 30 starter recipes chosen specifically for your baby\'s age.';
+
+  @override
+  String get niblinsBlog => 'Niblin\'s blog.';
+
+  @override
+  String get unlockFirstBitesGuide =>
+      'Unlock the \'First Bites\' guide to get started with confidence.';
+
+  @override
+  String get or => 'or';
+
+  @override
+  String get continueWithEmail => 'Continue with email';
+
+  @override
+  String get signUpWithEmail => 'Sign up with email';
+
+  @override
+  String get close => 'Close';
+
+  @override
+  String get fullName => 'Full Name';
+
+  @override
+  String get janeDoe => 'Jane Doe';
+
+  @override
+  String get nameIsRequired => 'Name is required';
+
+  @override
+  String saveBabysPlanAndGetStarted(String babyName) {
+    return 'Save $babyName\'s Plan & Get Started';
+  }
+
+  @override
+  String get saveMyPlanAndGetStarted => 'Save My Plan & Get Started';
 }
