@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
+import 'package:phosphor_flutter/phosphor_flutter.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../common_widgets.dart/loading_indicator.dart';
@@ -37,21 +38,13 @@ class ImageCacheService extends _$ImageCacheService {
         color: Colors.grey[200],
         child: const Center(child: LoadingIndicator()),
       ),
-      placeholder: placeholder != null
-          ? (context, url) => placeholder
-          : (context, url) => Container(
-              width: width,
-              height: height,
-              color: Colors.grey[200],
-              child: const Center(child: LoadingIndicator()),
-            ),
       errorWidget: errorWidget != null
           ? (context, url, error) => errorWidget
           : (context, url, error) => Container(
               width: width,
               height: height,
               color: Colors.grey[300],
-              child: const Icon(Icons.error_outline, color: AppColors.error),
+              child: Icon(PhosphorIcons.bug(), color: AppColors.error),
             ),
     );
   }

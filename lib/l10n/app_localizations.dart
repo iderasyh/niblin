@@ -1141,6 +1141,222 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Save My Plan & Get Started'**
   String get saveMyPlanAndGetStarted;
+
+  /// No description provided for @home.
+  ///
+  /// In en, this message translates to:
+  /// **'Home'**
+  String get home;
+
+  /// No description provided for @explore.
+  ///
+  /// In en, this message translates to:
+  /// **'Explore'**
+  String get explore;
+
+  /// No description provided for @plan.
+  ///
+  /// In en, this message translates to:
+  /// **'Plan'**
+  String get plan;
+
+  /// No description provided for @tracker.
+  ///
+  /// In en, this message translates to:
+  /// **'Tracker'**
+  String get tracker;
+
+  /// No description provided for @goodMorning.
+  ///
+  /// In en, this message translates to:
+  /// **'Good morning'**
+  String get goodMorning;
+
+  /// No description provided for @goodAfternoon.
+  ///
+  /// In en, this message translates to:
+  /// **'Good afternoon'**
+  String get goodAfternoon;
+
+  /// No description provided for @timeForDinner.
+  ///
+  /// In en, this message translates to:
+  /// **'Time for dinner'**
+  String get timeForDinner;
+
+  /// No description provided for @goodEvening.
+  ///
+  /// In en, this message translates to:
+  /// **'Good evening'**
+  String get goodEvening;
+
+  /// No description provided for @monthOld.
+  ///
+  /// In en, this message translates to:
+  /// **'month old'**
+  String get monthOld;
+
+  /// No description provided for @monthsOld.
+  ///
+  /// In en, this message translates to:
+  /// **'months old'**
+  String get monthsOld;
+
+  /// No description provided for @settings.
+  ///
+  /// In en, this message translates to:
+  /// **'Settings'**
+  String get settings;
+
+  /// No description provided for @todaysMealPlan.
+  ///
+  /// In en, this message translates to:
+  /// **'Today\'s Meal Plan 🍲'**
+  String get todaysMealPlan;
+
+  /// No description provided for @minTotal.
+  ///
+  /// In en, this message translates to:
+  /// **'min total'**
+  String get minTotal;
+
+  /// No description provided for @viewRecipe.
+  ///
+  /// In en, this message translates to:
+  /// **'View Recipe'**
+  String get viewRecipe;
+
+  /// No description provided for @logMeal.
+  ///
+  /// In en, this message translates to:
+  /// **'Log Meal'**
+  String get logMeal;
+
+  /// No description provided for @swap.
+  ///
+  /// In en, this message translates to:
+  /// **'Swap'**
+  String get swap;
+
+  /// No description provided for @noMealsScheduledForToday.
+  ///
+  /// In en, this message translates to:
+  /// **'No meals scheduled for today'**
+  String get noMealsScheduledForToday;
+
+  /// No description provided for @tapHereToExploreRecipes.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap here to explore recipes!'**
+  String get tapHereToExploreRecipes;
+
+  /// No description provided for @exploreRecipes.
+  ///
+  /// In en, this message translates to:
+  /// **'Explore Recipes'**
+  String get exploreRecipes;
+
+  /// No description provided for @thisWeeksJourney.
+  ///
+  /// In en, this message translates to:
+  /// **'This Week\'s Journey'**
+  String get thisWeeksJourney;
+
+  /// No description provided for @readyToExploreNewFlavorsThisWeek.
+  ///
+  /// In en, this message translates to:
+  /// **'Ready to explore new flavors this week!'**
+  String get readyToExploreNewFlavorsThisWeek;
+
+  /// No description provided for @youveIntroducedOneNewFoodThisWeek.
+  ///
+  /// In en, this message translates to:
+  /// **'You\'ve introduced 1 new food this week! Great start.'**
+  String get youveIntroducedOneNewFoodThisWeek;
+
+  /// No description provided for @youveIntroducedNewFoodsThisWeek.
+  ///
+  /// In en, this message translates to:
+  /// **'You\'ve introduced {foodCount} new foods this week! Great job.'**
+  String youveIntroducedNewFoodsThisWeek(int foodCount);
+
+  /// No description provided for @mealsLogged.
+  ///
+  /// In en, this message translates to:
+  /// **'Meals logged'**
+  String get mealsLogged;
+
+  /// No description provided for @newFoods.
+  ///
+  /// In en, this message translates to:
+  /// **'New foods'**
+  String get newFoods;
+
+  /// No description provided for @forThisStage.
+  ///
+  /// In en, this message translates to:
+  /// **'For This Stage'**
+  String get forThisStage;
+
+  /// No description provided for @tip.
+  ///
+  /// In en, this message translates to:
+  /// **'Tip'**
+  String get tip;
+
+  /// No description provided for @article.
+  ///
+  /// In en, this message translates to:
+  /// **'Article'**
+  String get article;
+
+  /// No description provided for @reminder.
+  ///
+  /// In en, this message translates to:
+  /// **'Reminder'**
+  String get reminder;
+
+  /// No description provided for @milestone.
+  ///
+  /// In en, this message translates to:
+  /// **'Milestone'**
+  String get milestone;
+
+  /// No description provided for @safety.
+  ///
+  /// In en, this message translates to:
+  /// **'Safety'**
+  String get safety;
+
+  /// No description provided for @ages.
+  ///
+  /// In en, this message translates to:
+  /// **'Ages'**
+  String get ages;
+
+  /// No description provided for @months.
+  ///
+  /// In en, this message translates to:
+  /// **'months'**
+  String get months;
+
+  /// No description provided for @tiredOfDailyPlanning.
+  ///
+  /// In en, this message translates to:
+  /// **'Tired of daily planning?'**
+  String get tiredOfDailyPlanning;
+
+  /// No description provided for @unlockYourFullWeeklyMealPlan.
+  ///
+  /// In en, this message translates to:
+  /// **'Unlock your full weekly meal plan.'**
+  String get unlockYourFullWeeklyMealPlan;
+
+  /// No description provided for @goPremium.
+  ///
+  /// In en, this message translates to:
+  /// **'Go Premium'**
+  String get goPremium;
 }
 
 class _AppLocalizationsDelegate

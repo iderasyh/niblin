@@ -4,7 +4,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../app_bootstrap/app_startup.dart';
 import '../bottom_nav_bar/explore_screen.dart';
-import '../bottom_nav_bar/home_screen.dart';
+import '../features/home/presentation/screens/home_screen.dart';
 import '../bottom_nav_bar/plan_screen.dart';
 import '../bottom_nav_bar/tracker_screen.dart';
 import '../features/auth/data/firebase_auth_repository.dart';
@@ -16,6 +16,7 @@ import '../features/onboarding/presentation/screens/onboarding_screen.dart';
 import '../features/recipes/presentation/screens/recipe_list_screen.dart';
 import '../features/recipes/presentation/screens/recipe_detail_screen.dart';
 import '../bottom_nav_bar/bottom_nav_bar.dart';
+import '../features/settings/presentation/settings_screen.dart';
 import 'go_router_refresh_stream.dart';
 
 // --- AppRoute Enum ---
@@ -39,7 +40,10 @@ enum AppRoute {
 
   // Recipes
   recipes('/recipes'),
-  recipeDetail('/recipes/:recipeId');
+  recipeDetail('/recipes/:recipeId'),
+
+  // Settings
+  settings('/settings');
 
   const AppRoute(this.path);
   final String path;
@@ -100,7 +104,7 @@ final goRouterProvider = Provider<GoRouter>((ref) {
                     path != AppRoute.onboarding.path &&
                     path != AppRoute.paywall.path,
               ) // Exclude '/' and paywall
-              .any((path) => currentLocation.startsWith(path))) {
+              .any((path) => currentLocation == path)) {
         // Check startsWith for others (like /sign-in, /questionnaire)
         // If signed in and trying to access an unauthenticated path (like sign-in, sign-up, questionnaire),
         // redirect to the home screen within the shell.
@@ -228,6 +232,13 @@ final goRouterProvider = Provider<GoRouter>((ref) {
             },
           ),
         ],
+      ),
+
+      // Settings route
+      GoRoute(
+        path: AppRoute.settings.path,
+        name: AppRoute.settings.name,
+        builder: (context, state) => const SettingsScreen(),
       ),
     ],
   );

@@ -5,6 +5,9 @@ class FirebaseConsts {
   static const String recipesCollection = 'recipes';
   static const String userRecipeDataCollection = 'userRecipeData';
   static const String babyProfile = 'babyProfile';
+  static const String mealPlan = 'mealPlan';
+  static const String tipsCollection = 'tips';
+  static const String progressCollection = 'progress';
 
   // Documents
   static const String dataDoc = 'data';
@@ -20,7 +23,6 @@ class FirebaseConsts {
   // User Recipe Data Fields
   static const String triedField = 'tried';
   static const String personalNotesField = 'personalNotes';
-  static const String mealPlanField = 'mealPlan';
 
   // Common Fields
   static const String completedField = 'completed';

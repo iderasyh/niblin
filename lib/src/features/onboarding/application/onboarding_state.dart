@@ -1,3 +1,5 @@
+import 'package:uuid/uuid.dart';
+
 import '../domain/allergen.dart';
 import '../domain/baby_profile.dart';
 import '../domain/feeding_style.dart';
@@ -22,6 +24,7 @@ class OnboardingState {
       currentStep: OnboardingStep.emotionalHook,
       totalSteps: OnboardingStep.values.length,
       babyProfile: BabyProfile(
+        id: const Uuid().v4(),
         babyName: '',
         dateOfBirth: DateTime.now(),
         feedingStyle: FeedingStyle.purees,

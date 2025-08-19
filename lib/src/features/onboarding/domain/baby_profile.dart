@@ -5,6 +5,7 @@ import 'onboarding_goal.dart';
 
 class BabyProfile {
   const BabyProfile({
+    required this.id,
     required this.babyName,
     required this.dateOfBirth,
     required this.feedingStyle,
@@ -12,6 +13,7 @@ class BabyProfile {
     this.goals = const <OnboardingGoal>[],
   });
 
+  final String id;
   final String babyName;
   final DateTime dateOfBirth;
   final FeedingStyle feedingStyle;
@@ -19,6 +21,7 @@ class BabyProfile {
   final List<OnboardingGoal> goals;
 
   BabyProfile copyWith({
+    String? id,
     String? babyName,
     DateTime? dateOfBirth,
     FeedingStyle? feedingStyle,
@@ -26,6 +29,7 @@ class BabyProfile {
     List<OnboardingGoal>? goals,
   }) {
     return BabyProfile(
+      id: id ?? this.id,
       babyName: babyName ?? this.babyName,
       dateOfBirth: dateOfBirth ?? this.dateOfBirth,
       feedingStyle: feedingStyle ?? this.feedingStyle,
@@ -57,6 +61,7 @@ class BabyProfile {
 
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
+      'id': id,
       'babyName': babyName,
       'dateOfBirthIso': dateOfBirth.toIso8601String(),
       'feedingStyle': feedingStyle.name,
@@ -68,6 +73,7 @@ class BabyProfile {
   factory BabyProfile.fromMap(Map<String, dynamic> map) {
     final dynamic dateIso = map['dateOfBirthIso'];
     return BabyProfile(
+      id: map['id'] as String,
       babyName: map['babyName'] as String,
       dateOfBirth: dateIso is String
           ? DateTime.parse(dateIso)
@@ -97,14 +103,14 @@ class BabyProfile {
 
   @override
   String toString() {
-    return 'BabyProfile(babyName: '
-        '$babyName, dateOfBirth: $dateOfBirth, feedingStyle: $feedingStyle, allergies: $allergies, goals: $goals)';
+    return 'BabyProfile(id: $id, babyName: $babyName, dateOfBirth: $dateOfBirth, feedingStyle: $feedingStyle, allergies: $allergies, goals: $goals)';
   }
 
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
     return other is BabyProfile &&
+        other.id == id &&
         other.babyName == babyName &&
         other.dateOfBirth == dateOfBirth &&
         other.feedingStyle == feedingStyle &&
@@ -115,6 +121,7 @@ class BabyProfile {
   @override
   int get hashCode {
     return Object.hash(
+      id,
       babyName,
       dateOfBirth,
       feedingStyle,

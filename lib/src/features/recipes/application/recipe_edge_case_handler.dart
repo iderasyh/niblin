@@ -1,4 +1,5 @@
 import 'package:flutter/foundation.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../domain/baby_stage.dart';
@@ -14,7 +15,7 @@ part 'recipe_edge_case_handler.g.dart';
 
 /// Service for handling edge cases in recipe operations
 @riverpod
-RecipeEdgeCaseHandler recipeEdgeCaseHandler(RecipeEdgeCaseHandlerRef ref) {
+RecipeEdgeCaseHandler recipeEdgeCaseHandler(Ref ref) {
   return const RecipeEdgeCaseHandler();
 }
 
@@ -374,6 +375,10 @@ class RecipeEdgeCaseHandler {
       servings: 1,
       nutritionalInfo: const NutritionalInfo(
         caloriesPerServing: 0,
+        oneWordDescription: {
+          'en': 'Recipe Unavailable',
+          'sq': 'Receta e Padisponueshme',
+        },
         vitamins: {},
         minerals: {},
         developmentBenefits: [],

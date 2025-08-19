@@ -97,6 +97,10 @@ class RecipeErrorRecovery {
       servings: 1,
       nutritionalInfo: const NutritionalInfo(
         caloriesPerServing: 0,
+        oneWordDescription: {
+          'en': 'Recipe Unavailable',
+          'sq': 'Receta e Padisponueshme',
+        },
         vitamins: {},
         minerals: {},
         developmentBenefits: [],

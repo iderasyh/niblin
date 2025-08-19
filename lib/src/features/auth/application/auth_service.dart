@@ -28,8 +28,6 @@ class AuthService {
   UserRepository get _userRepository => ref.read(userRepositoryProvider);
   CacheService get _cacheService => ref.read(cacheServiceProvider.notifier);
 
-  User? get currentUser => _authRepository.currentUser;
-
   /// Function used to either sign in or sign up using email
   Future<void> authenticate(
     String email,
@@ -62,9 +60,7 @@ class AuthService {
               await _authRepository.updateProfile(displayName: displayName);
               ref.invalidate(authRepositoryProvider);
             }
-            // _newUserController.setIsNewUser(true);
-            // await _createFirestoreUserRecords();
-            // await _onLogin();
+            await _createFirestoreUserRecords();
           }
         } catch (e) {
           throw Exception(e);
@@ -135,7 +131,6 @@ class AuthService {
           return;
         }
         await _createFirestoreUserRecords();
-        await _onLogin();
       }
     } catch (e) {
       throw Exception(e);
@@ -154,7 +149,6 @@ class AuthService {
         return;
       }
       await _createFirestoreUserRecords();
-      await _onLogin();
       await _analyticsService.logEvent(
         AnalyticsEvents.signUp,
         parameters: {'method': 'apple'},
@@ -205,21 +199,21 @@ class AuthService {
 
   /// HELPER METHODS
   Future<User?> _isUserAlreadyRegistered() async {
+    final currentUser = _authRepository.currentUser;
     final user = await _userRepository.fetchUser(currentUser?.uid ?? '');
     return user;
   }
 
   Future<void> _onLogin() async {
+    final currentUser = _authRepository.currentUser;
     if (currentUser == null) {
       return;
     }
-    final userData = await _userRepository.fetchUser(currentUser!.uid);
+    final userData = await _userRepository.fetchUser(currentUser.uid);
     if (userData != null) {
       _cacheService.set(CacheKey.appUser, userData);
     }
-    final babyProfile = await _userRepository.fetchBabyProfile(
-      currentUser!.uid,
-    );
+    final babyProfile = await _userRepository.fetchBabyProfile(currentUser.uid);
     if (babyProfile != null) {
       _cacheService.set(CacheKey.babyProfile, babyProfile);
     }
@@ -231,8 +225,10 @@ class AuthService {
       return;
     }
     final updatedUser = _createUser(user);
+    _cacheService.set(CacheKey.appUser, updatedUser);
     await _userRepository.createUser(updatedUser);
     final babyProfile = ref.read(onboardingControllerProvider).babyProfile;
+    _cacheService.set(CacheKey.babyProfile, babyProfile);
     await _userRepository.createBabyProfile(user.uid, babyProfile);
   }
 

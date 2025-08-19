@@ -7,7 +7,7 @@ part of 'recipe_localization_service.dart';
 // **************************************************************************
 
 String _$recipeLocalizationServiceHash() =>
-    r'd7cbfd53bc5019e8803796dd9046193b369f384f';
+    r'0f8e3b3eb03839cd967d89afb63472ba733080a6';
 
 /// Service for handling recipe localization and measurement conversion
 ///

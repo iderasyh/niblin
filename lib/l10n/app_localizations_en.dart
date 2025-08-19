@@ -563,4 +563,117 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get saveMyPlanAndGetStarted => 'Save My Plan & Get Started';
+
+  @override
+  String get home => 'Home';
+
+  @override
+  String get explore => 'Explore';
+
+  @override
+  String get plan => 'Plan';
+
+  @override
+  String get tracker => 'Tracker';
+
+  @override
+  String get goodMorning => 'Good morning';
+
+  @override
+  String get goodAfternoon => 'Good afternoon';
+
+  @override
+  String get timeForDinner => 'Time for dinner';
+
+  @override
+  String get goodEvening => 'Good evening';
+
+  @override
+  String get monthOld => 'month old';
+
+  @override
+  String get monthsOld => 'months old';
+
+  @override
+  String get settings => 'Settings';
+
+  @override
+  String get todaysMealPlan => 'Today\'s Meal Plan 🍲';
+
+  @override
+  String get minTotal => 'min total';
+
+  @override
+  String get viewRecipe => 'View Recipe';
+
+  @override
+  String get logMeal => 'Log Meal';
+
+  @override
+  String get swap => 'Swap';
+
+  @override
+  String get noMealsScheduledForToday => 'No meals scheduled for today';
+
+  @override
+  String get tapHereToExploreRecipes => 'Tap here to explore recipes!';
+
+  @override
+  String get exploreRecipes => 'Explore Recipes';
+
+  @override
+  String get thisWeeksJourney => 'This Week\'s Journey';
+
+  @override
+  String get readyToExploreNewFlavorsThisWeek =>
+      'Ready to explore new flavors this week!';
+
+  @override
+  String get youveIntroducedOneNewFoodThisWeek =>
+      'You\'ve introduced 1 new food this week! Great start.';
+
+  @override
+  String youveIntroducedNewFoodsThisWeek(int foodCount) {
+    return 'You\'ve introduced $foodCount new foods this week! Great job.';
+  }
+
+  @override
+  String get mealsLogged => 'Meals logged';
+
+  @override
+  String get newFoods => 'New foods';
+
+  @override
+  String get forThisStage => 'For This Stage';
+
+  @override
+  String get tip => 'Tip';
+
+  @override
+  String get article => 'Article';
+
+  @override
+  String get reminder => 'Reminder';
+
+  @override
+  String get milestone => 'Milestone';
+
+  @override
+  String get safety => 'Safety';
+
+  @override
+  String get ages => 'Ages';
+
+  @override
+  String get months => 'months';
+
+  @override
+  String get tiredOfDailyPlanning => 'Tired of daily planning?';
+
+  @override
+  String get unlockYourFullWeeklyMealPlan =>
+      'Unlock your full weekly meal plan.';
+
+  @override
+  String get goPremium => 'Go Premium';
 }

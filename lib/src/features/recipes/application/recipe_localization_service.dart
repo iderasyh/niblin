@@ -22,18 +22,12 @@ class RecipeLocalizationService extends _$RecipeLocalizationService {
 
   /// Get localized recipe name
   String getLocalizedName(Recipe recipe) {
-    return LocalizedContent.getLocalizedText(
-      recipe.name,
-      currentLocale,
-    );
+    return LocalizedContent.getLocalizedText(recipe.name, currentLocale);
   }
 
   /// Get localized recipe description
   String getLocalizedDescription(Recipe recipe) {
-    return LocalizedContent.getLocalizedText(
-      recipe.description,
-      currentLocale,
-    );
+    return LocalizedContent.getLocalizedText(recipe.description, currentLocale);
   }
 
   /// Get localized ingredients with measurement conversion
@@ -45,26 +39,21 @@ class RecipeLocalizationService extends _$RecipeLocalizationService {
 
     // Convert measurements based on locale
     return ingredients.map((ingredient) {
-      if (ingredient.amount != null && ingredient.unit != null) {
-        final convertedAmount = MeasurementConverter.formatMeasurement(
-          ingredient.amount!,
-          ingredient.unit!,
-          currentLocale,
-        );
-        
-        // Parse the converted amount and unit
-        final parts = convertedAmount.split(' ');
-        if (parts.length >= 2) {
-          final amount = double.tryParse(parts[0]);
-          final unit = parts.sublist(1).join(' ');
-          
-          return ingredient.copyWith(
-            amount: amount,
-            unit: unit,
-          );
-        }
+      final convertedAmount = MeasurementConverter.formatMeasurement(
+        ingredient.amount,
+        ingredient.unit,
+        currentLocale,
+      );
+
+      // Parse the converted amount and unit
+      final parts = convertedAmount.split(' ');
+      if (parts.length >= 2) {
+        final amount = double.tryParse(parts[0]);
+        final unit = parts.sublist(1).join(' ');
+
+        return ingredient.copyWith(amount: amount, unit: unit);
       }
-      
+
       return ingredient;
     }).toList();
   }
@@ -87,10 +76,7 @@ class RecipeLocalizationService extends _$RecipeLocalizationService {
 
   /// Get localized storage info
   String getLocalizedStorageInfo(Recipe recipe) {
-    return LocalizedContent.getLocalizedText(
-      recipe.storageInfo,
-      currentLocale,
-    );
+    return LocalizedContent.getLocalizedText(recipe.storageInfo, currentLocale);
   }
 
   /// Get localized troubleshooting tips
@@ -122,24 +108,39 @@ class RecipeLocalizationService extends _$RecipeLocalizationService {
   /// Check if recipe has content for current locale
   bool hasContentForCurrentLocale(Recipe recipe) {
     return LocalizedContent.hasContentForLocale(recipe.name, currentLocale) ||
-           LocalizedContent.hasContentForLocale(recipe.description, currentLocale) ||
-           LocalizedContent.hasContentForLocale(recipe.ingredients, currentLocale) ||
-           LocalizedContent.hasContentForLocale(recipe.instructions, currentLocale);
+        LocalizedContent.hasContentForLocale(
+          recipe.description,
+          currentLocale,
+        ) ||
+        LocalizedContent.hasContentForLocale(
+          recipe.ingredients,
+          currentLocale,
+        ) ||
+        LocalizedContent.hasContentForLocale(
+          recipe.instructions,
+          currentLocale,
+        );
   }
 
   /// Get all available locales for a recipe
   List<String> getAvailableLocales(Recipe recipe) {
     final locales = <String>{};
-    
+
     locales.addAll(LocalizedContent.getAvailableLocales(recipe.name));
     locales.addAll(LocalizedContent.getAvailableLocales(recipe.description));
     locales.addAll(LocalizedContent.getAvailableLocales(recipe.ingredients));
     locales.addAll(LocalizedContent.getAvailableLocales(recipe.instructions));
-    locales.addAll(LocalizedContent.getAvailableLocales(recipe.servingGuidance));
+    locales.addAll(
+      LocalizedContent.getAvailableLocales(recipe.servingGuidance),
+    );
     locales.addAll(LocalizedContent.getAvailableLocales(recipe.storageInfo));
-    locales.addAll(LocalizedContent.getAvailableLocales(recipe.troubleshooting));
-    locales.addAll(LocalizedContent.getAvailableLocales(recipe.whyKidsLoveThis));
-    
+    locales.addAll(
+      LocalizedContent.getAvailableLocales(recipe.troubleshooting),
+    );
+    locales.addAll(
+      LocalizedContent.getAvailableLocales(recipe.whyKidsLoveThis),
+    );
+
     return locales.toList()..sort();
   }
 

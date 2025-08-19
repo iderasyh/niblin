@@ -1,0 +1,218 @@
+---
+description: Comprehensive strategy for implementing the Home Screen Calm Dashboard design
+globs: **/home_screen.dart,**/home/**,**/dashboard/**
+---
+
+# Home Screen Calm Dashboard Implementation Strategy
+
+## Overview
+Transform the [home_screen.dart](mdc:lib/src/bottom_nav_bar/home_screen.dart) into a "Calm Dashboard" that immediately answers: **"What should I feed my baby right now?"**
+
+## Core Principle
+A parent's life is chaotic; this screen must be the complete opposite. Every element should reduce cognitive load and provide clear, actionable information.
+
+## Implementation Steps
+
+### Phase 1: Foundation Setup
+
+#### Task 1.1: Create Domain Models
+Create the following models in appropriate feature domains:
+- `MealPlan` model in `lib/src/features/meal_plan/domain/`
+- `BabyProfile` model in `lib/src/features/baby_profile/domain/`
+- `ProgressTracker` model in `lib/src/features/progress/domain/`
+- `TipContent` model in `lib/src/features/tips/domain/`
+
+#### Task 1.2: Repository Setup
+Implement repositories following [Repository Implementation Rules](mdc:.cursor/rules/repository-implementation.mdc):
+- `MealPlanRepository` in `lib/src/features/meal_plan/data/`
+- `BabyProfileRepository` in `lib/src/features/baby_profile/data/`
+- `ProgressRepository` in `lib/src/features/progress/data/`
+- `TipsRepository` in `lib/src/features/tips/data/`
+
+#### Task 1.3: Service Layer
+Create application services:
+- `MealPlanningService` in `lib/src/features/meal_plan/application/`
+- `ProgressTrackingService` in `lib/src/features/progress/application/`
+- `PersonalizationService` in `lib/src/features/personalization/application/`
+
+### Phase 2: UI Component Development
+
+#### Task 2.1: Header Components
+Create in `lib/src/features/home/presentation/widgets/`:
+- `PersonalGreetingWidget`: Time-aware greeting with baby's name
+- `BabyStatusWidget`: Display baby's name and current age
+- `HomeHeaderWidget`: Container for header section
+
+**Key Requirements:**
+- Greeting should be time-aware ("Good morning!", "Time for lunch!")
+- Baby status format: "Leo, 7 months old"
+- Clean, unobtrusive settings icon in top-right
+
+#### Task 2.2: Meal Plan Components
+Create in `lib/src/features/meal_planning/presentation/widgets/`:
+- `MealPlanCard`: Individual meal card (Breakfast/Lunch/Dinner)
+- `MealPlanCarousel`: Horizontal scrolling container
+- `MealActionButtons`: Primary and secondary action buttons
+- `EmptyMealPlanState`: Friendly empty state
+
+**MealPlanCard Requirements:**
+- Visual hierarchy: Meal title → Recipe name → Image → Quick info
+- Action buttons: "View Recipe" (primary), "Log Meal", "Swap" (secondary)
+- Quick info: "⏱️ 15 min total", "Iron-Rich" badges
+- High-quality recipe images
+
+#### Task 2.3: Progress Components
+Create in `lib/src/features/progress/presentation/widgets/`:
+- `WeeklyProgressWidget`: Visual progress tracker
+- `FoodIntroductionTracker`: New foods introduced this week
+- `ProgressIndicators`: Visual elements (food icons, progress bars)
+
+**Progress Requirements:**
+- Section title: "This Week's Journey"
+- Visual feedback: Food icons (🥑 🥕 🍠) with encouraging text
+- Gamification elements to prevent picky eating
+
+#### Task 2.4: Tips Component
+Create in `lib/src/features/tips/presentation/widgets/`:
+- `DynamicTipCard`: Age-appropriate content card
+- `TipContentRenderer`: Smart content display based on baby's stage
+
+**Tip Requirements:**
+- Section title: "For This Stage"
+- Dynamic content based on baby's age and parent goals
+- Examples: "Is My Baby Ready for Finger Foods?", allergen safety tips
+
+#### Task 2.5: Premium Upgrade Component
+Create in `lib/src/features/subscription/presentation/widgets/`:
+- `PremiumUpgradeBanner`: Subtle bottom banner for free users
+
+**Banner Requirements:**
+- Clean, single-line design
+- Benefit-driven text: "Tired of daily planning? Unlock your full weekly meal plan. Go Premium"
+- Positioned above main navigation bar
+
+### Phase 3: State Management
+
+#### Task 3.1: Home Screen Controllers
+Create in `lib/src/features/home/presentation/controllers/`:
+- `HomeScreenController`: Main state management for home screen
+- `MealPlanController`: Handle meal plan state and actions
+- `ProgressController`: Manage progress tracking state
+
+#### Task 3.2: Riverpod Providers
+Implement providers using Riverpod Generator:
+- Current baby profile provider
+- Today's meal plan provider
+- Weekly progress provider
+- Dynamic tip content provider
+- User subscription status provider
+
+### Phase 4: Main Screen Assembly
+
+#### Task 4.1: Home Screen Layout
+Transform [home_screen.dart](mdc:lib/src/bottom_nav_bar/home_screen.dart) structure:
+
+```dart
+class HomeScreen extends ConsumerWidget {
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    return Scaffold(
+      body: SafeArea(
+        child: CustomScrollView(
+          slivers: [
+            // Header Section
+            SliverToBoxAdapter(child: HomeHeaderWidget()),
+            
+            // Main Meal Plan Section
+            SliverToBoxAdapter(child: MealPlanCarousel()),
+            
+            // Progress Tracker Section
+            SliverToBoxAdapter(child: WeeklyProgressWidget()),
+            
+            // Tips Section
+            SliverToBoxAdapter(child: DynamicTipCard()),
+            
+            // Premium Banner (if free user)
+            SliverToBoxAdapter(child: PremiumUpgradeBanner()),
+          ],
+        ),
+      ),
+    );
+  }
+}
+```
+
+#### Task 4.2: Responsive Design
+- Ensure components adapt to different screen sizes
+- Implement proper spacing and padding using design system
+- Test on various device sizes
+
+### Phase 5: Integration & Polish
+
+#### Task 5.1: Navigation Integration
+- Integrate with [app_router.dart](mdc:lib/src/routing/app_router.dart)
+- Ensure proper navigation to recipe details, settings, etc.
+- Follow routing rules for navigation
+
+#### Task 5.2: Data Integration
+- Connect components to real data sources
+- Implement proper loading states
+- Handle error states gracefully
+
+#### Task 5.3: Performance Optimization
+- Implement proper image caching for recipe photos
+- Optimize list performance for meal plan carousel
+- Add appropriate loading indicators
+
+### Phase 6: User Experience Enhancements
+
+#### Task 6.1: Animations & Transitions
+- Add subtle animations for card interactions
+- Implement smooth transitions between states
+- Maintain calm, non-intrusive feel
+
+#### Task 6.2: Accessibility
+- Implement proper semantics for screen readers
+- Ensure adequate color contrast
+- Add appropriate touch targets
+
+#### Task 6.3: Error Handling
+- Implement graceful error states
+- Provide helpful error messages
+- Include retry mechanisms where appropriate
+
+## Design Principles to Follow
+
+### Visual Hierarchy
+1. **Most Important**: Today's meal suggestions
+2. **Secondary**: Progress and encouragement
+3. **Tertiary**: Tips and educational content
+4. **Subtle**: Premium upgrade nudge
+
+### Color & Typography
+- Use calming colors from [app_colors.dart](mdc:lib/src/core/constants/app_colors.dart)
+- Ensure readability with proper contrast
+- Use consistent typography scale
+
+### Interaction Design
+- Primary actions should be immediately obvious
+- Secondary actions should be available but not competing
+- All interactions should feel responsive and predictable
+
+## Success Metrics
+- Time to find meal suggestion < 5 seconds
+- Single-tap access to most common actions
+- Reduced cognitive load through clear visual hierarchy
+- Positive emotional response through encouraging progress feedback
+
+## Testing Strategy
+- Unit tests for all business logic
+- Widget tests for individual components
+- Integration tests for complete user flows
+- Usability testing with actual parents
+
+## Notes
+- Always prioritize the core question: "What should I feed my baby right now?"
+- Every UI element should either answer this question or support the answer
+- Maintain the calm, confident tone throughout all interactions
+- Remember: Parents are overwhelmed - this screen should be their relief

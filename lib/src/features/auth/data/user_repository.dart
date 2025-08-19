@@ -3,14 +3,17 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../../../core/constants/firebase_consts.dart';
+import '../../meal_plan/data/meal_plan_repository.dart';
 import '../../onboarding/domain/baby_profile.dart';
+import '../../progress/data/progress_repository.dart';
 import '../domain/user.dart';
 
 part 'user_repository.g.dart';
 
 class UserRepository {
-  const UserRepository(this._firestore);
+  const UserRepository(this._firestore, this._ref);
   final FirebaseFirestore _firestore;
+  final Ref _ref;
 
   // --- Path Helpers ---
 
@@ -70,10 +73,16 @@ class UserRepository {
   Future<void> deleteUser(String userId) async {
     await _babyProfileDocRef(userId).delete();
     await _userDocRef(userId).delete();
+    await _ref
+        .read(mealPlanRepositoryProvider)
+        .deleteMealPlanCollection(userId);
+    await _ref
+        .read(progressRepositoryProvider)
+        .deleteProgressCollection();
   }
 }
 
 @riverpod
 UserRepository userRepository(Ref ref) {
-  return UserRepository(FirebaseFirestore.instance);
+  return UserRepository(FirebaseFirestore.instance, ref);
 }

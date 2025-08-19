@@ -573,4 +573,117 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String get saveMyPlanAndGetStarted => 'Ruaj planin tim & Fillo';
+
+  @override
+  String get home => 'Kreu';
+
+  @override
+  String get explore => 'Eksploro';
+
+  @override
+  String get plan => 'Plani';
+
+  @override
+  String get tracker => 'Gjurmo';
+
+  @override
+  String get goodMorning => 'Mirëmëngjes';
+
+  @override
+  String get goodAfternoon => 'Mirëdita';
+
+  @override
+  String get timeForDinner => 'Koha për darkë';
+
+  @override
+  String get goodEvening => 'Mirëmbrëma';
+
+  @override
+  String get monthOld => 'muajsh';
+
+  @override
+  String get monthsOld => 'muajsh';
+
+  @override
+  String get settings => 'Cilësimet';
+
+  @override
+  String get todaysMealPlan => 'Plani i Ushqimeve për Sot 🍲';
+
+  @override
+  String get minTotal => 'min në total';
+
+  @override
+  String get viewRecipe => 'Shiko Recetën';
+
+  @override
+  String get logMeal => 'Regjistro Ushqimin';
+
+  @override
+  String get swap => 'Ndërro';
+
+  @override
+  String get noMealsScheduledForToday =>
+      'Nuk ka ushqime të planifikuara për sot';
+
+  @override
+  String get tapHereToExploreRecipes => 'Shtyp këtu për të eksploruar recetat!';
+
+  @override
+  String get exploreRecipes => 'Eksploro Recetat';
+
+  @override
+  String get thisWeeksJourney => 'Këtë Javë';
+
+  @override
+  String get readyToExploreNewFlavorsThisWeek =>
+      'Gati për të eksploruar shije të reja këtë javë!';
+
+  @override
+  String get youveIntroducedOneNewFoodThisWeek =>
+      'Keni provuar 1 ushqim të ri këtë javë! Fillim i mbarë.';
+
+  @override
+  String youveIntroducedNewFoodsThisWeek(int foodCount) {
+    return 'Keni provuar $foodCount ushqime të reja këtë javë! Punë e shkëlqyer.';
+  }
+
+  @override
+  String get mealsLogged => 'Ushqime të regjistruara';
+
+  @override
+  String get newFoods => 'Ushqime të reja';
+
+  @override
+  String get forThisStage => 'Për Këtë Fazë';
+
+  @override
+  String get tip => 'Këshillë';
+
+  @override
+  String get article => 'Artikull';
+
+  @override
+  String get reminder => 'Kujtesë';
+
+  @override
+  String get milestone => 'Arritje';
+
+  @override
+  String get safety => 'Siguri';
+
+  @override
+  String get ages => 'Mosha';
+
+  @override
+  String get months => 'muajs';
+
+  @override
+  String get tiredOfDailyPlanning => 'U lodhe duke planifikuar çdo ditë?';
+
+  @override
+  String get unlockYourFullWeeklyMealPlan => 'Planifiko të gjithë javën tani.';
+
+  @override
+  String get goPremium => 'Kalo në Premium';
 }

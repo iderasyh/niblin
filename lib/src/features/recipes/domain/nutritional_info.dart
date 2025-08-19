@@ -4,6 +4,7 @@ import '../utils/localized_content.dart';
 class NutritionalInfo {
   const NutritionalInfo({
     required this.caloriesPerServing,
+    required this.oneWordDescription,
     this.vitamins = const <String, double>{},
     this.minerals = const <String, double>{},
     this.developmentBenefits = const <DevelopmentBenefit>[],
@@ -12,6 +13,7 @@ class NutritionalInfo {
   });
 
   final int caloriesPerServing;
+  final Map<String, String> oneWordDescription;
   final Map<String, double> vitamins;
   final Map<String, double> minerals;
   final List<DevelopmentBenefit> developmentBenefits;
@@ -20,6 +22,7 @@ class NutritionalInfo {
 
   NutritionalInfo copyWith({
     int? caloriesPerServing,
+    Map<String, String>? oneWordDescription,
     Map<String, double>? vitamins,
     Map<String, double>? minerals,
     List<DevelopmentBenefit>? developmentBenefits,
@@ -28,6 +31,7 @@ class NutritionalInfo {
   }) {
     return NutritionalInfo(
       caloriesPerServing: caloriesPerServing ?? this.caloriesPerServing,
+      oneWordDescription: oneWordDescription ?? this.oneWordDescription,
       vitamins: vitamins ?? this.vitamins,
       minerals: minerals ?? this.minerals,
       developmentBenefits: developmentBenefits ?? this.developmentBenefits,
@@ -39,6 +43,7 @@ class NutritionalInfo {
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
       'caloriesPerServing': caloriesPerServing,
+      'oneWordDescription': oneWordDescription,
       'vitamins': vitamins,
       'minerals': minerals,
       'developmentBenefits': developmentBenefits.map((b) => b.name).toList(),
@@ -50,14 +55,23 @@ class NutritionalInfo {
   factory NutritionalInfo.fromMap(Map<String, dynamic> map) {
     return NutritionalInfo(
       caloriesPerServing: map['caloriesPerServing'] as int? ?? 0,
-      vitamins: Map<String, double>.from(map['vitamins'] as Map? ?? <String, double>{}),
-      minerals: Map<String, double>.from(map['minerals'] as Map? ?? <String, double>{}),
-      developmentBenefits: (map['developmentBenefits'] as List<dynamic>? ?? <dynamic>[])
-          .map((e) => DevelopmentBenefit.values.firstWhere(
-                (b) => b.name == (e as String),
-                orElse: () => DevelopmentBenefit.brainDevelopment,
-              ))
-          .toList(),
+      oneWordDescription:
+          map['oneWordDescription'] as Map<String, String>? ?? <String, String>{},
+      vitamins: Map<String, double>.from(
+        map['vitamins'] as Map? ?? <String, double>{},
+      ),
+      minerals: Map<String, double>.from(
+        map['minerals'] as Map? ?? <String, double>{},
+      ),
+      developmentBenefits:
+          (map['developmentBenefits'] as List<dynamic>? ?? <dynamic>[])
+              .map(
+                (e) => DevelopmentBenefit.values.firstWhere(
+                  (b) => b.name == (e as String),
+                  orElse: () => DevelopmentBenefit.brainDevelopment,
+                ),
+              )
+              .toList(),
       benefitExplanations: Map<String, String>.from(
         map['benefitExplanations'] as Map? ?? <String, String>{},
       ),
@@ -72,6 +86,7 @@ class NutritionalInfo {
     if (identical(this, other)) return true;
     return other is NutritionalInfo &&
         other.caloriesPerServing == caloriesPerServing &&
+        other.oneWordDescription == oneWordDescription &&
         _mapEquals(other.vitamins, vitamins) &&
         _mapEquals(other.minerals, minerals) &&
         _listEquals(other.developmentBenefits, developmentBenefits) &&
@@ -83,33 +98,51 @@ class NutritionalInfo {
   int get hashCode {
     return Object.hash(
       caloriesPerServing,
+      oneWordDescription,
       Object.hashAll(vitamins.entries.map((e) => Object.hash(e.key, e.value))),
       Object.hashAll(minerals.entries.map((e) => Object.hash(e.key, e.value))),
       Object.hashAll(developmentBenefits),
-      Object.hashAll(benefitExplanations.entries.map((e) => Object.hash(e.key, e.value))),
+      Object.hashAll(
+        benefitExplanations.entries.map((e) => Object.hash(e.key, e.value)),
+      ),
       Object.hashAll(funFacts.entries.map((e) => Object.hash(e.key, e.value))),
     );
   }
 
   /// Get localized benefit explanation with fallback to English
-  String getLocalizedBenefitExplanation(String languageCode, {String fallback = 'en'}) {
-    return LocalizedContent.getLocalizedText(benefitExplanations, languageCode, fallback: fallback);
+  String getLocalizedBenefitExplanation(
+    String languageCode, {
+    String fallback = 'en',
+  }) {
+    return LocalizedContent.getLocalizedText(
+      benefitExplanations,
+      languageCode,
+      fallback: fallback,
+    );
   }
 
   /// Get localized fun fact with fallback to English
   String getLocalizedFunFact(String languageCode, {String fallback = 'en'}) {
-    return LocalizedContent.getLocalizedText(funFacts, languageCode, fallback: fallback);
+    return LocalizedContent.getLocalizedText(
+      funFacts,
+      languageCode,
+      fallback: fallback,
+    );
   }
 
   /// Check if nutritional info has content for given language
   bool hasContentForLanguage(String languageCode) {
-    return LocalizedContent.hasContentForLocale(benefitExplanations, languageCode) ||
-           LocalizedContent.hasContentForLocale(funFacts, languageCode);
+    return LocalizedContent.hasContentForLocale(
+          benefitExplanations,
+          languageCode,
+        ) ||
+        LocalizedContent.hasContentForLocale(funFacts, languageCode);
   }
 
   @override
   String toString() {
     return 'NutritionalInfo(caloriesPerServing: $caloriesPerServing, '
+        'oneWordDescription: $oneWordDescription, '
         'vitamins: $vitamins, minerals: $minerals, '
         'developmentBenefits: $developmentBenefits, '
         'benefitExplanations: $benefitExplanations, funFacts: $funFacts)';

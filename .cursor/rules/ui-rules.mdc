@@ -1,0 +1,15 @@
+---
+alwaysApply: true
+---
+# UI Rules
+
+## Responsiveness
+The project must be responsive and adapt to all screen sizes. To achieve this, use the utility class defined in [responsive_utils.dart](mdc:lib/src/core/utils/responsive_utils.dart). This class provides convenient access to responsive spacing, font sizes, and other metrics.
+
+## Colors
+All colors used in the application are defined in [app_colors.dart](mdc:lib/src/core/constants/app_colors.dart). Always use colors from this file to maintain a consistent color scheme.
+
+## Theme
+The application has a custom theme defined in [app_theme.dart](mdc:lib/src/theme/app_theme.dart). This theme configures the overall look and feel of UI components, including typography, button styles, and color schemes. Adhere to this theme when building UI components.
+
+When creating or modifying UI, you **must** adhere to the utilities and definitions in these files to ensure a consistent and responsive design.

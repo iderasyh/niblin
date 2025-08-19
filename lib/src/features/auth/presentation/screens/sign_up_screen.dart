@@ -603,7 +603,7 @@ class _SignUpScreenState extends ConsumerState<SignUpScreen>
                 child: ColoredBox(
                   color: Color(0x55FFFFFF),
                   child: Center(
-                    child: LoadingIndicator(color: AppColors.background),
+                    child: LoadingIndicator(),
                   ),
                 ),
               ),

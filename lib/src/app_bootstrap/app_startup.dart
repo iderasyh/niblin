@@ -6,7 +6,10 @@ import '../../l10n/app_localizations.dart';
 import '../../l10n/locale_controller.dart';
 import '../core/common_widgets.dart/loading_indicator.dart';
 import '../core/constants/app_colors.dart';
+import '../core/services/cache_service.dart';
 import '../core/utils/shared_preferences_provider.dart';
+import '../features/auth/data/firebase_auth_repository.dart';
+import '../features/auth/data/user_repository.dart';
 
 part 'app_startup.g.dart';
 
@@ -16,6 +19,23 @@ FutureOr<void> appStartup(Ref ref) async {
   await ref.read(sharedPreferencesProvider.future);
   final localeController = ref.read(localeControllerProvider.notifier);
   await localeController.initialize();
+
+  final user = ref.read(authRepositoryProvider).currentUser;
+  if (user == null) {
+    return;
+  }
+
+  final cacheService = ref.read(cacheServiceProvider.notifier);
+
+  // Functions called if the user is logged in
+  final babyProfile = await ref
+      .read(userRepositoryProvider)
+      .fetchBabyProfile(user.uid);
+
+  if (babyProfile != null) {
+    cacheService.set(CacheKey.babyProfile, babyProfile);
+  }
+
   return;
 }
 

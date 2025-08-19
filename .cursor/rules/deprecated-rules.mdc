@@ -1,0 +1,9 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Rules for deprecated
+
+- When giving opacity to a color, do not use [color].withOpacity([opacityValue]) anymore as it is depracated.
+- Always use [color].withValues(alpha: [opacityValue])

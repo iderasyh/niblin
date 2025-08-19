@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:phosphor_flutter/phosphor_flutter.dart';
 
+import '../../l10n/app_localizations.dart';
 import '../core/constants/app_colors.dart';
 import '../core/utils/responsive_utils.dart';
 
@@ -24,6 +25,7 @@ class BottomNavBar extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final localization = AppLocalizations.of(context)!;
     return Scaffold(
       body: navigationShell,
       bottomNavigationBar: Container(
@@ -49,28 +51,28 @@ class BottomNavBar extends ConsumerWidget {
                 0,
                 PhosphorIconsRegular.house,
                 PhosphorIconsFill.house,
-                'Home',
+                localization.home,
               ),
               _buildNavItem(
                 context,
                 1,
                 PhosphorIconsRegular.binoculars,
                 PhosphorIconsFill.binoculars,
-                'Explore',
+                localization.explore,
               ),
               _buildNavItem(
                 context,
                 2,
                 PhosphorIconsRegular.calendarHeart,
                 PhosphorIconsFill.calendarHeart,
-                'Plan',
+                localization.plan,
               ),
               _buildNavItem(
                 context,
                 3,
                 PhosphorIconsRegular.baby,
                 PhosphorIconsFill.baby,
-                'Tracker',
+                localization.tracker,
               ),
             ],
           ),

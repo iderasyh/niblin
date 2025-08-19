@@ -226,5 +226,50 @@
       }
     }
   },
-  "saveMyPlanAndGetStarted": "Save My Plan & Get Started"
+  "saveMyPlanAndGetStarted": "Save My Plan & Get Started",
+
+  "home": "Home",
+  "explore": "Explore",
+  "plan": "Plan",
+  "tracker": "Tracker",
+
+  "goodMorning": "Good morning",
+  "goodAfternoon": "Good afternoon",
+  "timeForDinner": "Time for dinner",
+  "goodEvening": "Good evening",
+  "monthOld": "month old",
+  "monthsOld": "months old",
+  "settings": "Settings",
+  "todaysMealPlan": "Today's Meal Plan 🍲",
+  "minTotal": "min total",
+  "viewRecipe": "View Recipe",
+  "logMeal": "Log Meal",
+  "swap": "Swap",
+  "noMealsScheduledForToday": "No meals scheduled for today",
+  "tapHereToExploreRecipes": "Tap here to explore recipes!",
+  "exploreRecipes": "Explore Recipes",
+  "thisWeeksJourney": "This Week's Journey",
+  "readyToExploreNewFlavorsThisWeek": "Ready to explore new flavors this week!",
+  "youveIntroducedOneNewFoodThisWeek": "You've introduced 1 new food this week! Great start.",
+  "youveIntroducedNewFoodsThisWeek": "You've introduced {foodCount} new foods this week! Great job.",
+  "@youveIntroducedNewFoodsThisWeek": {
+    "placeholders": {
+      "foodCount": {
+        "type": "int"
+      }
+    }
+  },
+  "mealsLogged": "Meals logged",
+  "newFoods": "New foods",
+  "forThisStage": "For This Stage",
+  "tip": "Tip",
+  "article": "Article",
+  "reminder": "Reminder",
+  "milestone": "Milestone",
+  "safety": "Safety",
+  "ages": "Ages",
+  "months": "months",
+  "tiredOfDailyPlanning": "Tired of daily planning?",
+  "unlockYourFullWeeklyMealPlan": "Unlock your full weekly meal plan.",
+  "goPremium": "Go Premium"
 }
