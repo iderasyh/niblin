@@ -20,7 +20,7 @@ class FirebaseAuthRepository {
       return null;
     }
     return User(
-      id: user.uid,
+      uid: user.uid,
       email: user.email!,
       displayName: user.displayName,
       photoUrl: user.photoURL,

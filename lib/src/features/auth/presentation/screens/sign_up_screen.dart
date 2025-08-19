@@ -346,7 +346,7 @@ class _SignUpScreenState extends ConsumerState<SignUpScreen>
                                                   authControllerProvider
                                                       .notifier,
                                                 )
-                                                .googleSignIn();
+                                                .googleSignUp();
                                           },
                                         ),
                                         if (Platform.isIOS) ...[
@@ -370,7 +370,7 @@ class _SignUpScreenState extends ConsumerState<SignUpScreen>
                                                     authControllerProvider
                                                         .notifier,
                                                   )
-                                                  .appleSignIn();
+                                                  .appleSignUp();
                                             },
                                           ),
                                         ],

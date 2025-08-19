@@ -43,8 +43,9 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen>
   void initState() {
     super.initState();
     _pageController = PageController();
-    final initialProgress =
-        ref.read(onboardingControllerProvider).progressFraction;
+    final initialProgress = ref
+        .read(onboardingControllerProvider)
+        .progressFraction;
     _progressFrom = initialProgress;
     _progressTo = initialProgress;
     _ctaController = AnimationController(
@@ -172,6 +173,11 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen>
                     label: _getCtaLabel(state.currentStep),
                     isEnabled: _isCtaEnabled(state),
                     onPressed: () {
+                      // TODO: REMVOE THIS LINE. IT'S ONLY TEMPORARY FOR TESTING PURPOSE
+                      if (state.currentStep == OnboardingStep.paywall) {
+                        context.goNamed(AppRoute.signUp.name);
+                        return;
+                      }
                       HapticFeedback.mediumImpact();
                       _pageController.nextPage(
                         duration: const Duration(milliseconds: 300),

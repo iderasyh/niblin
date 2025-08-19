@@ -4,7 +4,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../../../core/constants/firebase_consts.dart';
 import '../../../core/services/cache_service.dart';
-import '../../baby/domain/baby.dart';
+import '../../onboarding/domain/baby_profile.dart';
 import '../domain/baby_stage.dart';
 import '../domain/category.dart';
 import '../domain/recipe.dart';
@@ -245,7 +245,7 @@ class FirebaseRecipeRepository implements RecipeRepository {
   BabyStage? _getBabyStage() {
     // Get cached baby model
     final cachedValues = _ref.read(cacheServiceProvider);
-    final baby = cachedValues[CacheKey.baby.name] as Baby?;
+    final baby = cachedValues[CacheKey.babyProfile.name] as BabyProfile?;
     if (baby == null) {
       throw RecipeRepositoryException('Baby not found in cache');
     }

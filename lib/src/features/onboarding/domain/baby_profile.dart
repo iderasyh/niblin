@@ -1,3 +1,4 @@
+import '../../recipes/domain/baby_stage.dart';
 import 'allergen.dart';
 import 'feeding_style.dart';
 import 'onboarding_goal.dart';
@@ -33,6 +34,27 @@ class BabyProfile {
     );
   }
 
+  /// Calculate baby's age in months
+  int get ageInMonths {
+    final now = DateTime.now();
+    final difference = now.difference(dateOfBirth);
+    return (difference.inDays / 30.44).floor(); // Average days per month
+  }
+
+  /// Get the appropriate baby stage based on current age
+  BabyStage? get currentStage {
+    final age = ageInMonths;
+
+    for (final stage in BabyStage.values) {
+      if (stage.isAppropriateForAge(age)) {
+        return stage;
+      }
+    }
+
+    // If baby is too young (under 4 months) or too old (over 24 months)
+    return null;
+  }
+
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
       'babyName': babyName,
@@ -54,24 +76,28 @@ class BabyProfile {
         (e) => e.name == (map['feedingStyle'] as String),
         orElse: () => FeedingStyle.purees,
       ),
-      allergies: (map['allergies'] as List<dynamic>? ?? const <dynamic>[]) 
-          .map((e) => Allergen.values.firstWhere(
-                (a) => a.name == (e as String),
-                orElse: () => Allergen.other,
-              ))
+      allergies: (map['allergies'] as List<dynamic>? ?? const <dynamic>[])
+          .map(
+            (e) => Allergen.values.firstWhere(
+              (a) => a.name == (e as String),
+              orElse: () => Allergen.other,
+            ),
+          )
           .toList(),
-      goals: (map['goals'] as List<dynamic>? ?? const <dynamic>[]) 
-          .map((e) => OnboardingGoal.values.firstWhere(
-                (g) => g.name == (e as String),
-                orElse: () => OnboardingGoal.healthyGrowth,
-              ))
+      goals: (map['goals'] as List<dynamic>? ?? const <dynamic>[])
+          .map(
+            (e) => OnboardingGoal.values.firstWhere(
+              (g) => g.name == (e as String),
+              orElse: () => OnboardingGoal.healthyGrowth,
+            ),
+          )
           .toList(),
     );
   }
 
   @override
   String toString() {
-    return 'BabyProfile(babyName: ' 
+    return 'BabyProfile(babyName: '
         '$babyName, dateOfBirth: $dateOfBirth, feedingStyle: $feedingStyle, allergies: $allergies, goals: $goals)';
   }
 
@@ -106,5 +132,3 @@ bool _listEquals<T>(List<T> a, List<T> b) {
   }
   return true;
 }
-
-

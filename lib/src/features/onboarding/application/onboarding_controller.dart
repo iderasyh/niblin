@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-import '../data/onboarding_repository.dart';
 import '../domain/allergen.dart';
 import '../domain/feeding_style.dart';
 import '../domain/onboarding_goal.dart';
@@ -92,7 +91,6 @@ class OnboardingController extends _$OnboardingController {
   }
 
   Future<void> saveProfileAndProceed() async {
-    final repo = ref.read(onboardingRepositoryProvider);
     // Validate minimal requirements
     if (state.babyProfile.babyName.trim().isEmpty) {
       state = state.copyWith(nameError: 'Name required');
@@ -103,7 +101,6 @@ class OnboardingController extends _$OnboardingController {
     }
     state = state.copyWith(isSaving: true, errorMessage: null);
     try {
-      await repo.saveBabyProfile(state.babyProfile);
       nextStep();
     } catch (e) {
       state = state.copyWith(errorMessage: e.toString());
@@ -111,18 +108,4 @@ class OnboardingController extends _$OnboardingController {
       state = state.copyWith(isSaving: false);
     }
   }
-
-  Future<void> completeOnboarding() async {
-    final repo = ref.read(onboardingRepositoryProvider);
-    state = state.copyWith(isSaving: true, errorMessage: null);
-    try {
-      await repo.setOnboardingCompleted(true);
-    } catch (e) {
-      state = state.copyWith(errorMessage: e.toString());
-    } finally {
-      state = state.copyWith(isSaving: false);
-    }
-  }
 }
-
-

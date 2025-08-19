@@ -40,6 +40,15 @@ class AuthController extends _$AuthController {
     return !state.hasError;
   }
 
+  /// Sign up with Google
+  Future<bool> googleSignUp() async {
+    state = const AsyncLoading();
+    state = await AsyncValue.guard(() async {
+      await _authService.googleSignUp();
+    });
+    return !state.hasError;
+  }
+
   /// Sign in with Apple
   Future<bool> appleSignIn() async {
     state = const AsyncLoading();
@@ -48,6 +57,15 @@ class AuthController extends _$AuthController {
       await _authService.appleSignIn();
     });
 
+    return !state.hasError;
+  }
+
+  /// Sign up with Apple
+  Future<bool> appleSignUp() async {
+    state = const AsyncLoading();
+    state = await AsyncValue.guard(() async {
+      await _authService.appleSignUp();
+    });
     return !state.hasError;
   }
 

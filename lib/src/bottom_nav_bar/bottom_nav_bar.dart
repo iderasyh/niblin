@@ -27,11 +27,20 @@ class BottomNavBar extends ConsumerWidget {
     return Scaffold(
       body: navigationShell,
       bottomNavigationBar: Container(
-        color: AppColors.neutralLight,
+        decoration: BoxDecoration(
+          color: AppColors.background,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withValues(alpha: 0.05),
+              blurRadius: 2,
+              offset: const Offset(0, -2),
+            ),
+          ],
+        ),
 
         child: BottomAppBar(
           elevation: 0,
-          color: AppColors.neutralLight,
+          color: AppColors.surface,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [

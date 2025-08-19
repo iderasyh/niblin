@@ -2,11 +2,15 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../../../../l10n/app_localizations.dart';
+import '../../../../l10n/locale_controller.dart';
 import '../../../core/constants/analytics_events.dart';
 import '../../../core/services/analytics_service.dart';
 import '../../../core/services/cache_service.dart';
 import '../../../routing/app_router.dart';
+import '../../onboarding/application/onboarding_controller.dart';
 import '../data/firebase_auth_repository.dart';
+import '../data/user_repository.dart';
+import '../domain/user.dart';
 
 part 'auth_service.g.dart';
 
@@ -21,6 +25,10 @@ class AuthService {
   FirebaseAuthRepository get _authRepository =>
       ref.read(authRepositoryProvider);
   AnalyticsService get _analyticsService => ref.read(analyticsServiceProvider);
+  UserRepository get _userRepository => ref.read(userRepositoryProvider);
+  CacheService get _cacheService => ref.read(cacheServiceProvider.notifier);
+
+  User? get currentUser => _authRepository.currentUser;
 
   /// Function used to either sign in or sign up using email
   Future<void> authenticate(
@@ -37,13 +45,7 @@ class AuthService {
             AnalyticsEvents.login,
             parameters: {'method': 'email'},
           );
-          final currentUser = _authRepository.currentUser;
-          if (currentUser != null) {
-            // final appUser = await _userRepository.fetchUser(currentUser.id);
-            // if (appUser != null) {
-            //   await _onLogin();
-            // }
-          }
+          await _onLogin();
         } catch (error) {
           throw Exception(error);
         }
@@ -82,7 +84,12 @@ class AuthService {
           AnalyticsEvents.login,
           parameters: {'method': 'google'},
         );
-        // await _onLogin();
+        final isExistingUser = await _isUserAlreadyRegistered();
+        if (isExistingUser != null) {
+          await _onLogin();
+        } else {
+          await signOut();
+        }
       }
     } catch (e) {
       throw Exception(e);
@@ -100,7 +107,59 @@ class AuthService {
         AnalyticsEvents.login,
         parameters: {'method': 'apple'},
       );
-      // await _onLogin();
+      final isExistingUser = await _isUserAlreadyRegistered();
+      if (isExistingUser != null) {
+        await _onLogin();
+      } else {
+        await signOut();
+      }
+    } catch (e) {
+      throw Exception(e);
+    }
+  }
+
+  Future<void> googleSignUp() async {
+    try {
+      final googleAuthCredentials = await _authRepository
+          .getGoogleAuthCredentials();
+      if (googleAuthCredentials != null) {
+        await _authRepository.signInWithCredentials(googleAuthCredentials);
+        await _analyticsService.logEvent(
+          AnalyticsEvents.signUp,
+          parameters: {'method': 'google'},
+        );
+        final user = await _isUserAlreadyRegistered();
+        // Checking if user is already registered
+        // If user is already registered, we don't need to create new records
+        if (user != null) {
+          return;
+        }
+        await _createFirestoreUserRecords();
+        await _onLogin();
+      }
+    } catch (e) {
+      throw Exception(e);
+    }
+  }
+
+  Future<void> appleSignUp() async {
+    try {
+      final appleAuthCredentials = await _authRepository
+          .getAppleAuthCredentials();
+      await _authRepository.signInWithCredentials(appleAuthCredentials);
+      final user = await _isUserAlreadyRegistered();
+      // Checking if user is already registered
+      // If user is already registered, we don't need to create new records
+      if (user != null) {
+        return;
+      }
+      await _createFirestoreUserRecords();
+      await _onLogin();
+      await _analyticsService.logEvent(
+        AnalyticsEvents.signUp,
+        parameters: {'method': 'apple'},
+      );
+      // Additional sign-up logic can be added here if needed
     } catch (e) {
       throw Exception(e);
     }
@@ -134,11 +193,54 @@ class AuthService {
         throw Exception(localization.noUserIsCurrentlyLoggedIn);
       }
 
+      // Delete the user's firestore records
+      await _userRepository.deleteUser(user.uid);
+
       // Delete the user's authentication account
       await _authRepository.deleteAccount(password: password ?? '');
     } catch (e) {
       throw Exception(localization.failedToDeleteAccount);
     }
+  }
+
+  /// HELPER METHODS
+  Future<User?> _isUserAlreadyRegistered() async {
+    final user = await _userRepository.fetchUser(currentUser?.uid ?? '');
+    return user;
+  }
+
+  Future<void> _onLogin() async {
+    if (currentUser == null) {
+      return;
+    }
+    final userData = await _userRepository.fetchUser(currentUser!.uid);
+    if (userData != null) {
+      _cacheService.set(CacheKey.appUser, userData);
+    }
+    final babyProfile = await _userRepository.fetchBabyProfile(
+      currentUser!.uid,
+    );
+    if (babyProfile != null) {
+      _cacheService.set(CacheKey.babyProfile, babyProfile);
+    }
+  }
+
+  Future<void> _createFirestoreUserRecords() async {
+    final user = _authRepository.currentUser;
+    if (user == null) {
+      return;
+    }
+    final updatedUser = _createUser(user);
+    await _userRepository.createUser(updatedUser);
+    final babyProfile = ref.read(onboardingControllerProvider).babyProfile;
+    await _userRepository.createBabyProfile(user.uid, babyProfile);
+  }
+
+  User _createUser(User user) {
+    final userSettings = user.userSettings;
+    final locale = ref.read(localeControllerProvider);
+    final updatedUserSettings = userSettings.copyWith(appLangauge: locale);
+    return user.copyWith(userSettings: updatedUserSettings);
   }
 }
 

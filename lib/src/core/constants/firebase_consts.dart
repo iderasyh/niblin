@@ -4,9 +4,10 @@ class FirebaseConsts {
   static const String onboardingCollection = 'onboarding';
   static const String recipesCollection = 'recipes';
   static const String userRecipeDataCollection = 'userRecipeData';
+  static const String babyProfile = 'babyProfile';
 
   // Documents
-  static const String babyProfileDoc = 'babyProfile';
+  static const String dataDoc = 'data';
   static const String metaDoc = 'meta';
 
   // Recipe Fields

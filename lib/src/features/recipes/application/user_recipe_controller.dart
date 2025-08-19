@@ -93,11 +93,11 @@ class UserRecipeController extends _$UserRecipeController {
       final repository = ref.read(userRecipeRepositoryProvider);
 
       // Load all user recipe data in parallel
-      final allUserDataFuture = repository.getAllUserRecipeData(user.id);
-      final favoritesFuture = repository.getFavoriteRecipeIds(user.id);
-      final triedFuture = repository.getTriedRecipeIds(user.id);
+      final allUserDataFuture = repository.getAllUserRecipeData(user.uid);
+      final favoritesFuture = repository.getFavoriteRecipeIds(user.uid);
+      final triedFuture = repository.getTriedRecipeIds(user.uid);
       final mealPlanFuture = repository.getMealPlanRecipeIdsForDateRange(
-        user.id,
+        user.uid,
         DateTime.now().subtract(const Duration(days: 30)),
         DateTime.now().add(const Duration(days: 30)),
       );
@@ -143,7 +143,7 @@ class UserRecipeController extends _$UserRecipeController {
 
     try {
       final repository = ref.read(userRecipeRepositoryProvider);
-      await repository.toggleFavorite(user.id, recipeId);
+      await repository.toggleFavorite(user.uid, recipeId);
 
       // Update local state optimistically
       final currentFavorites = List<String>.from(state.favoriteRecipeIds);
@@ -170,7 +170,7 @@ class UserRecipeController extends _$UserRecipeController {
 
     try {
       final repository = ref.read(userRecipeRepositoryProvider);
-      await repository.markAsTried(user.id, recipeId);
+      await repository.markAsTried(user.uid, recipeId);
 
       // Update local state optimistically
       final currentTried = List<String>.from(state.triedRecipeIds);
@@ -216,7 +216,7 @@ class UserRecipeController extends _$UserRecipeController {
 
     try {
       final repository = ref.read(userRecipeRepositoryProvider);
-      await repository.updatePersonalNotes(user.id, recipeId, notes);
+      await repository.updatePersonalNotes(user.uid, recipeId, notes);
 
       // Update local state
       await _updateUserRecipeData(recipeId);
@@ -259,7 +259,7 @@ class UserRecipeController extends _$UserRecipeController {
 
     try {
       final repository = ref.read(userRecipeRepositoryProvider);
-      await repository.addToMealPlan(user.id, recipeId, date);
+      await repository.addToMealPlan(user.uid, recipeId, date);
 
       // Update local state optimistically
       final dateKey = DateTime(date.year, date.month, date.day);
@@ -298,7 +298,7 @@ class UserRecipeController extends _$UserRecipeController {
 
     try {
       final repository = ref.read(userRecipeRepositoryProvider);
-      await repository.removeFromMealPlan(user.id, recipeId);
+      await repository.removeFromMealPlan(user.uid, recipeId);
 
       // Update local state optimistically
       final dateKey = DateTime(date.year, date.month, date.day);
@@ -329,7 +329,7 @@ class UserRecipeController extends _$UserRecipeController {
 
     try {
       final repository = ref.read(userRecipeRepositoryProvider);
-      await repository.incrementViewCount(user.id, recipeId);
+      await repository.incrementViewCount(user.uid, recipeId);
 
       // Update user recipe data
       await _updateUserRecipeData(recipeId);
@@ -397,7 +397,7 @@ class UserRecipeController extends _$UserRecipeController {
 
     try {
       final repository = ref.read(userRecipeRepositoryProvider);
-      final userData = await repository.getUserRecipeData(user.id, recipeId);
+      final userData = await repository.getUserRecipeData(user.uid, recipeId);
 
       if (userData != null) {
         final currentData = Map<String, UserRecipeData>.from(

@@ -4,7 +4,7 @@ part 'cache_service.g.dart';
 
 enum CacheKey {
   appUser,
-  baby,
+  babyProfile,
   // Recipe keys
   recipesByStage,
   recipeById,
